@@ -1,12 +1,10 @@
-# gatsby-starter-default
+# ReactJS Dallas on the web
 
-The default Gatsby starter.
-
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+Home of the ReactJS Dallas user group, founded in February 2016.
 
 ## Clone it
 
-git clone →
+`git clone https://github.com/reactjs-dallas/reactjs-dallas-site.git`
 
 ## Run it
 
@@ -19,6 +17,10 @@ gatsby develop
 ## Help build it
 
 Contributing to `reactjs-dallas-site`...
+
+## Bootstrapped with...
+
+The default Gatsby starter.
 
 ## License
 
