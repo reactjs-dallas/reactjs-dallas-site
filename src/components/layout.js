@@ -22,11 +22,22 @@ const Layout = ({ children, data }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'description',
+              content: 'Website for the ReactJS Dallas User Group',
+            },
+            {
+              name: 'keywords',
+              content:
+                'react, reactjs, JavaScript, frontend, web development, dallas',
+            },
           ]}
         >
           <html lang="en" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"
+            rel="stylesheet"
+          />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
