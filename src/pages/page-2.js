@@ -1,8 +1,11 @@
+// External Dependencies
 import React from 'react';
 import { Link } from 'gatsby';
 
+// Internal Dependencies
 import Layout from '../components/layout';
 
+// Component Definition
 const SecondPage = () => (
   <Layout>
     <h1>Hi from the second page</h1>

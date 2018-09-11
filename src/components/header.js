@@ -1,31 +1,34 @@
+// External Dependencies
 import React from 'react';
 import { Link } from 'gatsby';
 
+// Internal Dependencies
+import ReactLogoSvg from '../images/react-logo.svg';
+
+// Component Definition
 const Header = ({ siteTitle }) => (
   <div
     style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
+      background: '#20232A',
     }}
   >
     <div
       style={{
+        fontFamily: 'Roboto',
         margin: '0 auto',
         maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
+        padding: '1rem',
       }}
     >
-      <h1 style={{ fontFamily: 'Roboto', margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <Link
+        to="/"
+        style={{
+          color: 'white',
+          textDecoration: 'none',
+        }}
+      >
+        <ReactLogoSvg /> {siteTitle}
+      </Link>
     </div>
   </div>
 );

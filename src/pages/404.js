@@ -1,6 +1,10 @@
+// External Dependencies
 import React from 'react';
+
+// Internal Dependencies
 import Layout from '../components/layout';
 
+// Component Definition
 const NotFoundPage = () => (
   <Layout>
     <h1>NOT FOUND</h1>
