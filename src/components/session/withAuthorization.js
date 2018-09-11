@@ -1,17 +1,19 @@
+// External Dependencies
 import React from 'react';
 import { navigate } from "gatsby";
 
-import AuthUserContext from '../Session/AuthUserContext';
+// Internal Dependencies
+import AuthUserContext from './AuthUserContext';
 import { firebase } from '../../firebase';
-import * as routes from '../../constants/routes';
 
+// Component Definition
 const withAuthorization = condition => Component => {
   class WithAuthorization extends React.Component {
     componentDidMount() {
       if (typeof window !== 'undefined') {
         firebase.auth.onAuthStateChanged(authUser => {
           if (!condition(authUser)) {
-            navigate('/signup-2');
+            navigate('/dashboard');
           }
         });
       }

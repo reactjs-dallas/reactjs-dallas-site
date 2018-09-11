@@ -2,8 +2,10 @@
 import React from 'react';
 
 // Internal Dependencies
+import AuthUserContext from '../components/session/AuthUserContext';
 import Layout from '../components/layout';
 import SignUpForm from '../components/signup-form';
+import withAuthorization from '../components/session/withAuthorization';
 
 // Local Variables
 const rootStyles = {
@@ -32,24 +34,34 @@ const contentStyles = {
   alignItems: 'center',
 };
 
+const authCondition = authUser => !!authUser;
+
 // Component Definition
 const SignUpPage2 = () => (
   <Layout>
-    <div css={rootStyles}>
-      <section css={heroContainerStyles}>
-        <header>
-          <h1 css={heroTitleStyles}>ReactJS Dallas</h1>
-          <div css={heroTextStyles}>Where DFW eats pizza</div>
-        </header>
-      </section>
-
-      <section css={contentStyles}>
-        <p>🔥 Sign up for a new Firebase login. 🔥</p>
-        <SignUpForm />
-      </section>
-
-    </div>
+    <SignUpPage2Content />
   </Layout>
 );
+
+const SignUpPage2Content = withAuthorization(authCondition)(() => (
+  <AuthUserContext.Consumer>
+    {authUser => (
+      <div css={rootStyles}>
+        <section css={heroContainerStyles}>
+          <header>
+            <h1 css={heroTitleStyles}>ReactJS Dallas</h1>
+            <div css={heroTextStyles}>Where DFW eats pizza</div>
+          </header>
+        </section>
+
+        <section css={contentStyles}>
+          <p>🔥 Sign up for a new Firebase login. 🔥</p>
+          <SignUpForm />
+        </section>
+
+      </div>
+    )}
+  </AuthUserContext.Consumer>
+));
 
 export default SignUpPage2;

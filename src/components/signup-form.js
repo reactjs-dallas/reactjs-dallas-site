@@ -44,7 +44,7 @@ class SignUpForm extends Component {
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         this.setState({ ...INITIAL_STATE });
-        navigate('/');
+        navigate('/dashboard');
       })
       .catch(error => {
         this.setState(byPropKey('error', error));

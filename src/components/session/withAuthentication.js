@@ -1,8 +1,11 @@
+// External Dependencies
 import React from 'react';
 
+// Internal Dependencies
 import AuthUserContext from './AuthUserContext';
 import { firebase } from '../../firebase';
 
+// Component Definition
 const withAuthentication = Component =>
   class WithAuthentication extends React.Component {
     constructor(props) {
