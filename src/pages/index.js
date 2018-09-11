@@ -46,11 +46,7 @@ const dallasLogoStyles = {
 };
 
 // Component Definition
-const IndexPage = (props) => {
-  const {
-    classes,
-  } = props;
-
+const IndexPage = () => {
   return (
     <Layout>
       <div css={rootStyles}>
