@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 // Internal Dependencies
 import Header from './header';
+import Footer from './footer';
 import './layout.css';
 
 // Component Definition
@@ -51,6 +52,7 @@ const Layout = ({ children, data }) => (
         >
           {children}
         </div>
+        <Footer />
       </>
     )}
   />

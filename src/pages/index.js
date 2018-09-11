@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 // Internal Dependencies
 import Layout from '../components/layout';
-import AccountBoxSvg from '../images/reactjs-dallas-icon.svg';
+import DallasLogoSvg from '../images/reactjs-dallas-icon.svg';
 
 // Local Variables
 const rootStyles = {
@@ -68,7 +68,7 @@ const IndexPage = (props) => {
         </section>
 
         <div css={dallasLogoContainerStyles}>
-          <AccountBoxSvg style={dallasLogoStyles} />
+          <DallasLogoSvg style={dallasLogoStyles} />
         </div>
       </div>
     </Layout>
