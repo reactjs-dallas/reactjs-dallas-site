@@ -6,13 +6,15 @@
   "dependencies": {
     "@material-ui/core": "^3.0.3",
     "gatsby": "next",
+    "gatsby-plugin-glamor": "next",
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
+    "glamor": "^2.20.40",
+    "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-helmet": "^5.2.0",
-    "react-jss": "^8.6.1"
+    "react-helmet": "^5.2.0"
   },
   "keywords": [
     "gatsby"

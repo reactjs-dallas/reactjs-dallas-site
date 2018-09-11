@@ -8,12 +8,12 @@ import ReactLogoSvg from '../images/react-logo.svg';
 // Component Definition
 const Header = ({ siteTitle }) => (
   <div
-    style={{
+    css={{
       background: '#20232A',
     }}
   >
     <div
-      style={{
+      css={{
         fontFamily: 'Roboto',
         margin: '0 auto',
         maxWidth: 960,
@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
     >
       <Link
         to="/"
-        style={{
+        css={{
           color: 'white',
           textDecoration: 'none',
         }}
