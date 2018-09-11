@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { navigate } from 'gatsby';
 
 // Internal Dependencies
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
 
 // Local Variables
 const INITIAL_STATE = {
@@ -43,6 +43,16 @@ class SignUpForm extends Component {
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
+
+        // Create a user in your own accessible Firebase Database too
+        db.doCreateUser(authUser.user.uid, username, email)
+          .then(() => {
+            this.setState({ ...INITIAL_STATE });
+          })
+          .catch(error => {
+            this.setState(byPropKey('error', error));
+          });
+
         this.setState({ ...INITIAL_STATE });
         navigate('/dashboard');
       })

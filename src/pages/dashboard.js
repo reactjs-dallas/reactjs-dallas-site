@@ -51,9 +51,9 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    // db.onceGetUsers().then(snapshot =>
-    //   this.setState(() => ({ users: fromObjectToList(snapshot.val()) }))
-    // );
+    db.onceGetUsers().then(snapshot =>
+      this.setState(() => ({ users: fromObjectToList(snapshot.val()) }))
+    );
   }
 
   render() {
@@ -69,12 +69,13 @@ class Dashboard extends Component {
 
 const UserList = ({ users }) => (
   <div>
-    <h2>List of App User IDs (Saved on Sign Up in Firebase Database)</h2>
+    <h4>List of App User IDs (Saved on Sign Up in Firebase Database)</h4>
+    <hr />
     {users.map(user => <div key={user.index}>{user.index}</div>)}
   </div>
 );
 
-const DashboardContent = withAuthorization(authCondition)(users =>
+const DashboardContent = withAuthorization(authCondition)(props => (
   <div css={rootStyles}>
     <section css={heroContainerStyles}>
       <header>
@@ -84,12 +85,11 @@ const DashboardContent = withAuthorization(authCondition)(users =>
     </section>
 
     <section css={contentStyles}>
-      <h3>User List</h3>
-      <p>It will go here if we set up the database to work!</p>
-      {!!users.length && <UserList users={users} />}
+      <h2>User List</h2>
+      {!!props.users.length && <UserList users={props.users} />}
     </section>
 
   </div>
-);
+));
 
 export default Dashboard;
