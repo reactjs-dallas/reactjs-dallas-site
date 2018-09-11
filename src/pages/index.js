@@ -58,8 +58,9 @@ const IndexPage = () => {
         </section>
 
         <section css={contentStyles}>
-          <p>Welcome to your new Gatsby site.</p>
+          <p>Welcome to DFW!</p>
           <p>Now go build something great.</p>
+          <p>And show someone else how to do it, too! 🤓</p>
           <Link to="/page-2/">Go to page 2</Link>
         </section>
 

@@ -176,7 +176,7 @@ textarea {
 }
 ::-webkit-input-placeholder {
   color: inherit;
-  opacity: 0.54;
+  opacity: 0.4;
 }
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
@@ -599,6 +599,9 @@ code {
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
+}
+input {
+  margin-bottom: 12px;
 }
 pre code {
   background: none;
