@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
-import 'firebase/auth';
 import 'firebase/database';
+import 'firebase/auth';
 
 // const prodConfig = {
 //   apiKey: YOUR_API_KEY,
