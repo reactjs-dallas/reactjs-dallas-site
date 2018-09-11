@@ -5,6 +5,12 @@ import { Link } from 'gatsby';
 // Internal Dependencies
 import ReactLogoSvg from '../images/react-logo.svg';
 
+// Local Variables
+const reactLogoStyles = {
+  width: 24,
+  height: 24,
+};
+
 // Component Definition
 const Header = ({ siteTitle }) => (
   <div
@@ -27,7 +33,7 @@ const Header = ({ siteTitle }) => (
           textDecoration: 'none',
         }}
       >
-        <ReactLogoSvg /> {siteTitle}
+        <ReactLogoSvg style={reactLogoStyles} /> {siteTitle}
       </Link>
     </div>
   </div>

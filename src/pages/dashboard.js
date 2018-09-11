@@ -85,6 +85,7 @@ const DashboardContent = withAuthorization(authCondition)(users =>
 
     <section css={contentStyles}>
       <h3>User List</h3>
+      <p>It will go here if we set up the database to work!</p>
       {!!users.length && <UserList users={users} />}
     </section>
 

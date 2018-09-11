@@ -61,7 +61,7 @@ const IndexPage = () => {
           <p>Welcome to DFW!</p>
           <p>Now go build something great.</p>
           <p>And show someone else how to do it, too! 🤓</p>
-          <Link to="/page-2/">Go to page 2</Link>
+          <Link to="/signup/">Go to sign up</Link>
         </section>
 
         <div css={dallasLogoContainerStyles}>
