@@ -7,6 +7,7 @@ import { StaticQuery, graphql } from 'gatsby';
 // Internal Dependencies
 import Header from './header';
 import Footer from './footer';
+import withAuthentication from './session/withAuthentication';
 import './layout.css';
 
 // Component Definition
@@ -62,4 +63,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export default withAuthentication(Layout);

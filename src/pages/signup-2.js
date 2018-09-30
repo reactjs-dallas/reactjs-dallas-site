@@ -1,10 +1,11 @@
 // External Dependencies
 import React from 'react';
-import { Link } from 'gatsby';
 
 // Internal Dependencies
+import AuthUserContext from '../components/session/AuthUserContext';
 import Layout from '../components/layout';
-import DallasLogoSvg from '../images/reactjs-dallas-icon.svg';
+import SignUpForm from '../components/signup-form';
+import withAuthorization from '../components/session/withAuthorization';
 
 // Local Variables
 const rootStyles = {
@@ -30,46 +31,37 @@ const contentStyles = {
   flexDirection: 'column',
   justifyContent: 'center',
   padding: '3.5rem 0',
-}
-
-const dallasLogoContainerStyles = {
-  background: '#B9B9B9',
-  display: 'flex',
-  justifyContent: 'center',
-  minHeight: 360,
-  padding: 64,
-}
-
-const dallasLogoStyles = {
-  width: 128,
-  height: 128,
+  alignItems: 'center',
 };
 
+const authCondition = authUser => !!authUser;
+
 // Component Definition
-const IndexPage = () => {
-  return (
-    <Layout>
+const SignUpPage2 = () => (
+  <Layout>
+    <SignUpPage2Content />
+  </Layout>
+);
+
+const SignUpPage2Content = withAuthorization(authCondition)(() => (
+  <AuthUserContext.Consumer>
+    {authUser => (
       <div css={rootStyles}>
         <section css={heroContainerStyles}>
           <header>
             <h1 css={heroTitleStyles}>ReactJS Dallas</h1>
-            <div css={heroTextStyles}>Where DFW learns</div>
+            <div css={heroTextStyles}>Where DFW eats pizza</div>
           </header>
         </section>
 
         <section css={contentStyles}>
-          <p>Welcome to DFW!</p>
-          <p>Now go build something great.</p>
-          <p>And show someone else how to do it, too! 🤓</p>
-          <Link to="/signup/">Go to sign up</Link>
+          <p>🔥 Sign up for a new Firebase login. 🔥</p>
+          <SignUpForm />
         </section>
 
-        <div css={dallasLogoContainerStyles}>
-          <DallasLogoSvg style={dallasLogoStyles} />
-        </div>
       </div>
-    </Layout>
-  );
-};
+    )}
+  </AuthUserContext.Consumer>
+));
 
-export default IndexPage;
+export default SignUpPage2;

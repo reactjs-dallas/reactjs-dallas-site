@@ -5,6 +5,8 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^3.0.3",
+    "dotenv": "^6.0.0",
+    "firebase": "^5.4.2",
     "gatsby": "next",
     "gatsby-plugin-glamor": "next",
     "gatsby-plugin-manifest": "next",

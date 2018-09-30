@@ -1,9 +1,5 @@
 // External Dependencies
 import React from 'react';
-import { Link } from 'gatsby';
-
-// Internal Dependencies
-import ReactLogoSvg from '../images/react-logo.svg';
 
 // Component Definition
 const Footer = ({ siteTitle }) => (

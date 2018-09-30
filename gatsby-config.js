@@ -1,3 +1,8 @@
+// Give gatsby access to env keys
+require('dotenv').config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'ReactJS Dallas',
