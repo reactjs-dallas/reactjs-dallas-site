@@ -1,6 +1,6 @@
 // External Dependencies
 import React from 'react';
-import { navigate } from "gatsby";
+import { navigate } from 'gatsby';
 
 // Internal Dependencies
 import AuthUserContext from './AuthUserContext';
@@ -13,7 +13,7 @@ const withAuthorization = condition => Component => {
       if (typeof window !== 'undefined') {
         firebase.auth.onAuthStateChanged(authUser => {
           if (!condition(authUser)) {
-            navigate('/dashboard');
+            navigate('/');
           }
         });
       }

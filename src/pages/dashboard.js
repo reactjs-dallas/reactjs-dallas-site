@@ -8,7 +8,7 @@ import { db } from '../firebase';
 
 // Local Variables
 const rootStyles = {
-  textAlign: 'center'
+  textAlign: 'center',
 };
 
 const heroContainerStyles = {
@@ -71,25 +71,28 @@ const UserList = ({ users }) => (
   <div>
     <h4>List of App User IDs (Saved on Sign Up in Firebase Database)</h4>
     <hr />
-    {users.map(user => <div key={user.index}>{user.index}</div>)}
+    {users.map(user => (
+      <div key={user.index}>{user.index}</div>
+    ))}
   </div>
 );
 
-const DashboardContent = withAuthorization(authCondition)(props => (
-  <div css={rootStyles}>
-    <section css={heroContainerStyles}>
-      <header>
-        <h1 css={heroTitleStyles}>Dashboard</h1>
-        <div css={heroTextStyles}>Where DFW ninjas roam freely</div>
-      </header>
-    </section>
+const DashboardContent = withAuthorization(authCondition)(props => {
+  return (
+    <div css={rootStyles}>
+      <section css={heroContainerStyles}>
+        <header>
+          <h1 css={heroTitleStyles}>Dashboard</h1>
+          <div css={heroTextStyles}>Where DFW ninjas roam freely</div>
+        </header>
+      </section>
 
-    <section css={contentStyles}>
-      <h2>User List</h2>
-      {!!props.users.length && <UserList users={props.users} />}
-    </section>
-
-  </div>
-));
+      <section css={contentStyles}>
+        <h2>User List</h2>
+        {!!props.users.length && <UserList users={props.users} />}
+      </section>
+    </div>
+  );
+});
 
 export default Dashboard;
