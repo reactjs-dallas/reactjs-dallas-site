@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // Internal Dependencies
 import Layout from '../components/layout';
 import withAuthorization from '../components/session/withAuthorization';
-import { db } from '../firebase';
+// import { db } from '../firebase';
 
 // Local Variables
 const rootStyles = {
@@ -46,14 +46,29 @@ class Dashboard extends Component {
     super(props);
 
     this.state = {
+      initFirebase: false,
       users: [],
     };
   }
 
+  firebaseInit = () => {
+    if (this.props.firebase && !this.state.initFirebase) {
+      this.props.firebase.onceGetUsers().then(snapshot =>
+        this.setState(() => ({
+          users: fromObjectToList(snapshot.val()),
+        })),
+      );
+
+      this.setState({ initFirebase: true });
+    }
+  };
+
   componentDidMount() {
-    db.onceGetUsers().then(snapshot =>
-      this.setState(() => ({ users: fromObjectToList(snapshot.val()) }))
-    );
+    this.firebaseInit();
+  }
+
+  componentDidUpdate() {
+    this.firebaseInit();
   }
 
   render() {

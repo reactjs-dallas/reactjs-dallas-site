@@ -3,27 +3,39 @@ import React from 'react';
 
 // Internal Dependencies
 import AuthUserContext from './AuthUserContext';
-import { firebase } from '../../firebase';
+import { withFirebase } from '../Firebase/FirebaseContext';
 
 // Component Definition
-const withAuthentication = Component =>
+const withAuthentication = Component => {
   class WithAuthentication extends React.Component {
     constructor(props) {
       super(props);
 
       this.state = {
+        initFirebase: false,
         authUser: null,
       };
     }
 
-    componentDidMount() {
-      if (typeof window !== 'undefined') {
-        firebase.auth.onAuthStateChanged(authUser => {
+    firebaseInit = () => {
+      if (this.props.firebase && !this.state.initFirebase) {
+        this.props.firebase.auth.onAuthStateChanged(authUser => {
           authUser
-            ? this.setState(() => ({ authUser }))
-            : this.setState(() => ({ authUser: null }));
+            ? this.setState(() => ({ authUser, initFirebase: true }))
+            : this.setState(() => ({
+                authUser: null,
+                initFirebase: true,
+              }));
         });
       }
+    };
+
+    componentDidMount() {
+      this.firebaseInit();
+    }
+
+    componentDidUpdate() {
+      this.firebaseInit();
     }
 
     render() {
@@ -35,6 +47,9 @@ const withAuthentication = Component =>
         </AuthUserContext.Provider>
       );
     }
-  };
+  }
+
+  return withFirebase(WithAuthentication);
+}
 
 export default withAuthentication;

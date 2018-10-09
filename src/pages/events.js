@@ -1,6 +1,5 @@
 // External Dependencies
 import React from 'react';
-import { Link } from 'gatsby';
 
 // Internal Dependencies
 import Layout from '../components/layout';

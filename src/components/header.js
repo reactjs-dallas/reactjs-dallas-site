@@ -1,6 +1,7 @@
 // External Dependencies
 import React from 'react';
 import { Link } from 'gatsby';
+import Popper from '@material-ui/core/Popper';
 
 // Internal Dependencies
 import ReactLogoSvg from '../images/react-logo.svg';
@@ -28,7 +29,7 @@ const Header = ({ siteTitle }) => (
         padding: '1rem',
         display: 'flex',
         alignItems: 'baseline',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
       }}
     >
       <div>
@@ -42,7 +43,7 @@ const Header = ({ siteTitle }) => (
           <ReactLogoSvg style={reactLogoStyles} /> {siteTitle}
         </Link>
       </div>
-      <div>
+      <div css={{ fontSize: 16 }}>
         <Link
           to="/events"
           css={{
@@ -51,6 +52,16 @@ const Header = ({ siteTitle }) => (
           }}
         >
           Events
+        </Link>
+        <Link
+          to="/signin"
+          css={{
+            color: 'white',
+            textDecoration: 'none',
+            marginLeft: 16,
+          }}
+        >
+          Login
         </Link>
       </div>
     </div>
