@@ -5,6 +5,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^3.2.0",
+    "core-js": "^2.5.7",
     "dotenv": "^6.1.0",
     "firebase": "^5.5.3",
     "gatsby": "^2.0.19",
@@ -29,7 +30,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.13.7"
+    "@babel/polyfill": "^7.0.0"
   },
   "repository": {
     "type": "git",
