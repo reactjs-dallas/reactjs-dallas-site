@@ -28,11 +28,8 @@ const byPropKey = (propertyName, value) => () => ({
 
 // Component Definition
 class SignUpForm extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { ...INITIAL_STATE };
-  }
+  // UNNECESSARY CONSTRUCTOR
+  state = { ...INITIAL_STATE };
 
   onSubmit = (event) => {
     const {

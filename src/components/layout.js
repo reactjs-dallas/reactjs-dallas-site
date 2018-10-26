@@ -11,7 +11,7 @@ import withAuthentication from './session/withAuthentication';
 import './layout.css';
 
 // Component Definition
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -22,7 +22,9 @@ const Layout = ({ children, data }) => (
         }
       }
     `}
+
     render={data => (
+      // SHORT SYNTAX FOR REACT FRAGMENT
       <>
         <Helmet
           title={data.site.siteMetadata.title}
