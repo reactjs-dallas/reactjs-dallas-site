@@ -2,7 +2,7 @@
 
 <p class="description">Support the ReactJS Dallas User Group through donations.</p>
 
-All work done for ReactJS Dallas is open-source and volunteer. All code is MIT-licensed. The support of these awesome backers help us continue our mission of connecting the Dallas/Fort Worth developer community. If you'd like to join them, please consider:
+All work done for ReactJS Dallas is open-source and volunteer. All code is MIT-licensed. The support of these awesome sponsors and backers helps us continue our mission of connecting the Dallas/Fort Worth developer community. If you'd like to join them, please consider:
 
 - [Become a backer or sponsor on OpenCollective](https://opencollective.com/reactjs-dallas).
 
@@ -38,7 +38,7 @@ via [OpenCollective](https://opencollective.com/reactjs-dallas)
 
 ## Backers
 
-Backers are those who have pledged $5/month to $99/month to the ReactJS Dallas User Group.
+Backers are those who have pledged $2/month to $99/month to the ReactJS Dallas User Group.
 
 via [OpenCollective](https://opencollective.com/reactjs-dallas)
 

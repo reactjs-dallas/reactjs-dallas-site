@@ -36,7 +36,6 @@ const dallasLogoContainerStyles = {
   background: '#B9B9B9',
   display: 'flex',
   justifyContent: 'center',
-  minHeight: 360,
   padding: 64,
 }
 

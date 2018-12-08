@@ -1,10 +1,13 @@
 // External Dependencies
 import React from 'react';
-import { Link } from 'gatsby';
+import {
+  graphql,
+  Link,
+} from 'gatsby';
 
 // Internal Dependencies
-import Layout from '../components/layout';
-import DallasLogoSvg from '../images/reactjs-dallas-icon.svg';
+import Layout from '../../components/layout';
+import DallasLogoSvg from '../../images/reactjs-dallas-icon.svg';
 
 // Local Variables
 const rootStyles = {
@@ -26,17 +29,14 @@ const heroTextStyles = {
 };
 
 const contentStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  padding: '3.5rem 0',
+  textAlign: 'left',
+  padding: '3.5rem',
 }
 
 const dallasLogoContainerStyles = {
   background: '#B9B9B9',
   display: 'flex',
   justifyContent: 'center',
-  minHeight: 360,
   padding: 64,
 }
 
@@ -46,19 +46,20 @@ const dallasLogoStyles = {
 };
 
 // Component Definition
-const BackersPage = () => {
+const BackersPage = ({ data }) => {
+  console.log('data →', data);
   return (
     <Layout>
       <div css={rootStyles}>
         <section css={heroContainerStyles}>
           <header>
-            <h1 css={heroTitleStyles}>Backers</h1>
-            <div css={heroTextStyles}>Where DFW meets</div>
+            <h1 css={heroTitleStyles}>Sponsors & Backers</h1>
+            <div css={heroTextStyles}>Where DFW supports</div>
           </header>
         </section>
 
         <section css={contentStyles}>
-          <p>Add some event info...</p>
+          <div dangerouslySetInnerHTML={{ __html: data.allMarkdownRemark.edges[0].node.html }} />
         </section>
 
         <div css={dallasLogoContainerStyles}>
@@ -70,3 +71,15 @@ const BackersPage = () => {
 };
 
 export default BackersPage;
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+        }
+      }
+    }
+  }
+`
