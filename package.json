@@ -1,21 +1,21 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "reactjs-dallas-site",
+  "description": "Internet website for the ReactJS Dallas User Group",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Mike Mathew <m2mathew@me.com>",
   "dependencies": {
-    "@material-ui/core": "^3.2.0",
+    "@material-ui/core": "^3.6.1",
     "dotenv": "^6.1.0",
     "firebase": "^5.5.3",
-    "gatsby": "^2.0.19",
-    "gatsby-plugin-glamor": "^2.0.5",
-    "gatsby-plugin-manifest": "^2.0.5",
-    "gatsby-plugin-offline": "^2.0.5",
-    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby": "^2.0.64",
+    "gatsby-plugin-glamor": "^2.0.7",
+    "gatsby-plugin-manifest": "^2.0.11",
+    "gatsby-plugin-offline": "^2.0.19",
+    "gatsby-plugin-react-helmet": "^3.0.4",
     "glamor": "^2.20.40",
     "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -29,10 +29,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.13.7"
+    "prettier": "^1.15.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/reactjs-dallas/reactjs-dallas-site"
   }
 }
