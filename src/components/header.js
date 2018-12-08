@@ -53,6 +53,17 @@ const Header = ({ siteTitle }) => (
           Events
         </Link>
       </div>
+      <div>
+        <Link
+          to="/backers"
+          css={{
+            color: 'white',
+            textDecoration: 'none',
+          }}
+        >
+          Backers
+        </Link>
+      </div>
     </div>
   </div>
 );
