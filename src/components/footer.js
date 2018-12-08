@@ -1,6 +1,9 @@
 // External Dependencies
 import React from 'react';
 
+// Internal Dependencies
+import SlackSvg from './shared/icons/slack.svg';
+
 // Component Definition
 const Footer = ({ siteTitle }) => (
   <footer
@@ -26,8 +29,9 @@ const Footer = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          Join us on Slack ✨
+          <SlackSvg style={{ width: 32, height: 32 }} />
         </a>
+
       </div>
       <div>
         <a
@@ -37,7 +41,7 @@ const Footer = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          Twitter 🐦
+          Twitter
         </a>
       </div>
       <div>
@@ -48,7 +52,7 @@ const Footer = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          Facebook 🤦‍♀️
+          Facebook
         </a>
       </div>
     </div>
