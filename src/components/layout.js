@@ -46,16 +46,19 @@ const Layout = ({ children }) => (
             rel="stylesheet"
           />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            padding: 0,
-          }}
-        >
-          {children}
-        </div>
-        <Footer />
+        <main style={{ minHeight: '100vh' }}>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <div
+            style={{
+              margin: '0 auto',
+              minHeight: '92vh',
+              padding: 0,
+            }}
+          >
+            {children}
+          </div>
+          <Footer />
+        </main>
       </>
     )}
   />
