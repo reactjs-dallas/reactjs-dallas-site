@@ -1,10 +1,13 @@
 // External Dependencies
 import React from 'react';
-import { Link } from 'gatsby';
+import {
+  graphql,
+  Link,
+} from 'gatsby';
 
 // Internal Dependencies
-import Layout from '../components/layout';
-import DallasLogoSvg from '../images/reactjs-dallas-icon.svg';
+import Layout from '../../components/layout';
+import DallasLogoSvg from '../../images/reactjs-dallas-icon.svg';
 
 // Local Variables
 const rootStyles = {
@@ -26,10 +29,8 @@ const heroTextStyles = {
 };
 
 const contentStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  padding: '3.5rem 0',
+  textAlign: 'left',
+  padding: '3.5rem',
 }
 
 const dallasLogoContainerStyles = {
@@ -45,22 +46,20 @@ const dallasLogoStyles = {
 };
 
 // Component Definition
-const IndexPage = () => {
+const BackersPage = ({ data }) => {
+  console.log('data →', data);
   return (
     <Layout>
       <div css={rootStyles}>
         <section css={heroContainerStyles}>
           <header>
-            <h1 css={heroTitleStyles}>ReactJS Dallas</h1>
-            <div css={heroTextStyles}>Where DFW learns</div>
+            <h1 css={heroTitleStyles}>Sponsors & Backers</h1>
+            <div css={heroTextStyles}>Where DFW supports</div>
           </header>
         </section>
 
         <section css={contentStyles}>
-          <p>Welcome to DFW!</p>
-          <p>Now go build something great.</p>
-          <p>And show someone else how to do it, too! 🤓</p>
-          <Link to="/signup/">Go to sign up</Link>
+          <div dangerouslySetInnerHTML={{ __html: data.allMarkdownRemark.edges[0].node.html }} />
         </section>
 
         <div css={dallasLogoContainerStyles}>
@@ -71,4 +70,16 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default BackersPage;
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+        }
+      }
+    }
+  }
+`
