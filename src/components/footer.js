@@ -1,6 +1,21 @@
 // External Dependencies
 import React from 'react';
 
+// Internal Dependencies
+import FacebookSvg from './shared/icons/facebook.svg';
+import SlackSvg from './shared/icons/slack.svg';
+import TwitterSvg from './shared/icons/twitter.svg';
+
+// Local Variables
+const iconContainerStyles = {
+  margin: '0 16px',
+};
+
+const iconStyles = {
+  height: 32,
+  width: 32,
+};
+
 // Component Definition
 const Footer = ({ siteTitle }) => (
   <footer
@@ -15,10 +30,10 @@ const Footer = ({ siteTitle }) => (
         maxWidth: 960,
         padding: '1rem',
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
       }}
     >
-      <div>
+      <div style={iconContainerStyles}>
         <a
           href="https://join.slack.com/t/reactjs-dallas/shared_invite/enQtMzQ0NDY2NDQ3MzQ3LWI3NmM1ZWRhZTJiOWE4OTFiMTA0MWJlYWVhZWIxZjdkZTRiZGI0OWViZGFiMjhjYjdlMGI2NTBhMWYzNDJkODA"
           css={{
@@ -26,10 +41,11 @@ const Footer = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          Join us on Slack ✨
+          <SlackSvg style={iconStyles} />
         </a>
+
       </div>
-      <div>
+      <div style={iconContainerStyles}>
         <a
           href="https://twitter.com/reactjsdallas"
           css={{
@@ -37,10 +53,10 @@ const Footer = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          Twitter 🐦
+          <TwitterSvg style={iconStyles} />
         </a>
       </div>
-      <div>
+      <div style={iconContainerStyles}>
         <a
           href="https://www.facebook.com/reactjsdallas"
           css={{
@@ -48,7 +64,7 @@ const Footer = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          Facebook 🤦‍♀️
+          <FacebookSvg style={iconStyles} />
         </a>
       </div>
     </div>
