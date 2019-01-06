@@ -49,9 +49,8 @@ const Layout = ({ children }) => (
         <main style={{ minHeight: '100vh' }}>
           <Header siteTitle={data.site.siteMetadata.title} />
           <div
-            style={{
+            css={{
               margin: '0 auto',
-              minHeight: '92vh',
               padding: 0,
             }}
           >

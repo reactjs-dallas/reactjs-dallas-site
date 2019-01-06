@@ -56,7 +56,7 @@ const Footer = ({ siteTitle }) => (
           <TwitterSvg style={iconStyles} />
         </a>
       </div>
-      <div style={iconContainerStyles}>
+      <div css={iconContainerStyles}>
         <a
           href="https://www.facebook.com/reactjsdallas"
           css={{
