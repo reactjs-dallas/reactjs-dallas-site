@@ -18,6 +18,9 @@ const propTypes = {
 };
 
 const styles = theme => ({
+  card: {
+    maxWidth: 600,
+  },
   media: {
     height: '50%',
     width: '50%',
@@ -33,7 +36,7 @@ const styles = theme => ({
 // Component Definition
 const Upcoming = ({ classes }) => {
   return (
-    <Card>
+    <Card className={classes.card}>
       <div className={classes.upcomingMediaContainer}>
         <CardMedia
           alt="The Dallas Morning News Logo"

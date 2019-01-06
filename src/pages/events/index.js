@@ -17,6 +17,7 @@ import withRoot from '../../utils/withRoot';
 // Local Variables
 const styles = theme => ({
   content: {
+    alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
