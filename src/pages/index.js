@@ -6,7 +6,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import Layout from '../components/layout';
-import DallasLogoSvg from '../images/reactjs-dallas-icon.svg';
 import ReactDallasLogoSection from '../components/shared/ReactDallasLogoSection';
 import withRoot from '../utils/withRoot';
 

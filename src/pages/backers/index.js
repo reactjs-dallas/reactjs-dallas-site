@@ -7,7 +7,7 @@ import {
 
 // Internal Dependencies
 import Layout from '../../components/layout';
-import DallasLogoSvg from '../../images/reactjs-dallas-icon.svg';
+import ReactDallasLogoSection from '../components/shared/ReactDallasLogoSection';
 
 // Local Variables
 const rootStyles = {
@@ -33,18 +33,6 @@ const contentStyles = {
   padding: '3.5rem',
 }
 
-const dallasLogoContainerStyles = {
-  background: '#B9B9B9',
-  display: 'flex',
-  justifyContent: 'center',
-  padding: 64,
-}
-
-const dallasLogoStyles = {
-  width: 128,
-  height: 128,
-};
-
 // Component Definition
 const BackersPage = ({ data }) => {
   console.log('data →', data);
@@ -62,9 +50,7 @@ const BackersPage = ({ data }) => {
           <div dangerouslySetInnerHTML={{ __html: data.allMarkdownRemark.edges[0].node.html }} />
         </section>
 
-        <div css={dallasLogoContainerStyles}>
-          <DallasLogoSvg style={dallasLogoStyles} />
-        </div>
+        <ReactDallasLogoSection />
       </div>
     </Layout>
   );

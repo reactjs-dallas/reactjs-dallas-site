@@ -3,8 +3,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 // Internal Dependencies
+import ReactDallasLogoSection from '../components/shared/ReactDallasLogoSection';
 import Layout from '../components/layout';
-import DallasLogoSvg from '../images/reactjs-dallas-icon.svg';
 
 // Local Variables
 const rootStyles = {
@@ -32,18 +32,6 @@ const contentStyles = {
   padding: '3.5rem 0',
 }
 
-const dallasLogoContainerStyles = {
-  background: '#B9B9B9',
-  display: 'flex',
-  justifyContent: 'center',
-  padding: 64,
-}
-
-const dallasLogoStyles = {
-  width: 128,
-  height: 128,
-};
-
 // Component Definition
 const IndexPage = () => {
   return (
@@ -69,9 +57,7 @@ const IndexPage = () => {
           </p>
         </section>
 
-        <div css={dallasLogoContainerStyles}>
-          <DallasLogoSvg style={dallasLogoStyles} />
-        </div>
+        <ReactDallasLogoSection />
       </div>
     </Layout>
   );
