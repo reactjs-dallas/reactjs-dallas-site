@@ -1,80 +1,83 @@
 // External Dependencies
+import PropTypes from 'prop-types';
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
 // import { Link } from 'gatsby';
 
 // Internal Dependencies
 import Layout from '../components/layout';
 import DallasLogoSvg from '../images/reactjs-dallas-icon.svg';
+import ReactDallasLogoSection from '../components/shared/ReactDallasLogoSection';
+import withRoot from '../utils/withRoot';
 
 // Local Variables
-const rootStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  textAlign: 'center'
+const propTypes = {
+  classes: PropTypes.shape({
+    content: PropTypes.string.isRequired,
+    heroContainer: PropTypes.string.isRequired,
+    heroText: PropTypes.string.isRequired,
+    root: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
-const heroContainerStyles = {
-  background: '#282C34',
-  display: 'flex',
-  justifyContent: 'center',
-  padding: '2rem',
-};
+const styles = theme => ({
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
+    justifyContent: 'center',
+    minHeight: 310,
+    padding: '3.5rem 0',
+  },
+  heroContainer: {
+    background: '#282C34',
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '2rem',
+  },
+  heroText: {
+    color: theme.palette.common.white,
+    fontWeight: 100,
+  },
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    textAlign: 'center',
+  },
+});
 
 const heroTitleStyles = {
   color: '#61dafb',
 };
 
-const heroTextStyles = {
-  color: 'white',
-  fontWeight: 100,
-};
-
-const contentStyles = {
-  display: 'flex',
-  flexGrow: 1,
-  flexDirection: 'column',
-  justifyContent: 'center',
-  minHeight: 310,
-  padding: '3.5rem 0',
-}
-
-const dallasLogoContainerStyles = {
-  background: '#B9B9B9',
-  display: 'flex',
-  justifyContent: 'center',
-  padding: 64,
-}
-
-const dallasLogoStyles = {
-  width: 128,
-  height: 128,
-};
-
 // Component Definition
-const IndexPage = () => {
+const IndexPage = ({
+  classes,
+}) => {
   return (
     <Layout>
-      <div css={rootStyles}>
-        <section css={heroContainerStyles}>
+      <div className={classes.root}>
+        <section className={classes.heroContainer}>
           <header>
             <h1 css={heroTitleStyles}>ReactJS Dallas</h1>
-            <div css={heroTextStyles}>Where DFW learns</div>
+            <div className={classes.heroText}>Where DFW learns</div>
           </header>
         </section>
 
-        <section css={contentStyles}>
+        <section className={classes.content}>
           <p>Welcome to the DFW React Community!</p>
           <p>Now go build something great</p>
           <p>And show someone else how to do it, too! 🤓</p>
           {/* <Link to="/signup/">Go to sign up</Link> */}
         </section>
 
-        <div css={dallasLogoContainerStyles}>
-          <DallasLogoSvg style={dallasLogoStyles} />
-        </div>
+        <ReactDallasLogoSection />
+
       </div>
     </Layout>
   );
 };
 
-export default IndexPage;
+IndexPage.propTypes = propTypes;
+
+export default withRoot(withStyles(styles)(IndexPage));
