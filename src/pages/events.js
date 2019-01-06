@@ -80,10 +80,8 @@ const Events = ({ classes }) => {
             <CardContent>
               <h3>December 2018</h3>
               <h4>ReactJS @ BottleRocket</h4>
-              <div>6:15 - 7:00pm: Pizza/Drinks & meeting other people</div>
-              <div>6:30 - 7:00pm: Jobs Open Mic and jobs follow-up</div>
-              <div>7:00 - 7:45pm - Morgan Dedmon - "WASM: What is that?"</div>
-              <div>8:00 - 8:45pm: Salvador Aceves - "Redux Sagas in Practice"</div>
+              <div>Morgan Dedmon — WASM: What is that?</div>
+              <div>Salvador Aceves — Redux Sagas in Practice</div>
 
               <p style={{ marginTop: 12 }}>
                 <a href="https://www.meetup.com/ReactJSDallas/events/pbbdwnyxqbpb/">View on meetup.com</a>
