@@ -5,6 +5,7 @@
   "author": "Mike Mathew <m2mathew@me.com>",
   "dependencies": {
     "@material-ui/core": "^3.6.1",
+    "@material-ui/icons": "^3.0.1",
     "dotenv": "^6.1.0",
     "firebase": "^5.5.3",
     "gatsby": "^2.0.64",

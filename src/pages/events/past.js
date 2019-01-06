@@ -22,8 +22,8 @@ const styles = theme => ({
     height: '50%',
     width: '50%',
   },
-  upcomingMediaContainer: {
-    background: '#0a0a0a',
+  pastMediaContainer: {
+    background: '#f1f1f1',
     display: 'flex',
     justifyContent: 'center',
     paddingTop: 24,
@@ -31,31 +31,32 @@ const styles = theme => ({
 });
 
 // Component Definition
-const Upcoming = ({ classes }) => {
+const Past = ({ classes }) => {
   return (
     <Card>
-      <div className={classes.upcomingMediaContainer}>
+      <div className={classes.pastMediaContainer}>
         <CardMedia
-          alt="The Dallas Morning News Logo"
+          alt="Bottle Rocket Logo"
           className={classes.media}
           component="img"
-          image="https://www.belomediagroup.com/wp-content/uploads/2017/06/TheDallasMorningNews_white-768x210.png"
-          title="The Dallas Morning News Logo"
+          image="https://www.bottlerocketstudios.com/assets/br-logo.png"
+          title="Bottle Rocket Logo"
         />
       </div>
       <CardContent>
-        <h3>January 2019</h3>
-        <h4>ReactJS @ The Dallas Morning News Headquarters</h4>
-        <div>Mike Orren — Why React is big news for local news</div>
+        <h3>December 2018</h3>
+        <h4>ReactJS @ BottleRocket</h4>
+        <div>Morgan Dedmon — WASM: What is that?</div>
+        <div>Salvador Aceves — Redux Sagas in Practice</div>
 
         <p style={{ marginTop: 12 }}>
-          <a href="https://www.meetup.com/ReactJSDallas/events/pbbdwnyzcblb/">View on meetup.com</a>
+          <a href="https://www.meetup.com/ReactJSDallas/events/pbbdwnyxqbpb/">View on meetup.com</a>
         </p>
       </CardContent>
     </Card>
   );
 };
 
-Upcoming.propTypes = propTypes;
+Past.propTypes = propTypes;
 
-export default withRoot(withStyles(styles)(Upcoming));
+export default withRoot(withStyles(styles)(Past));
