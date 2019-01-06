@@ -2,7 +2,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-// import { Link } from 'gatsby';
 
 // Internal Dependencies
 import Layout from '../components/layout';
@@ -38,16 +37,15 @@ const styles = theme => ({
     color: theme.palette.common.white,
     fontWeight: 100,
   },
+  heroTitle: {
+    color: '#61dafb',
+  },
   root: {
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
   },
 });
-
-const heroTitleStyles = {
-  color: '#61dafb',
-};
 
 // Component Definition
 const IndexPage = ({
@@ -58,7 +56,7 @@ const IndexPage = ({
       <div className={classes.root}>
         <section className={classes.heroContainer}>
           <header>
-            <h1 css={heroTitleStyles}>ReactJS Dallas</h1>
+            <h1 className={classes.heroTitle}>ReactJS Dallas</h1>
             <div className={classes.heroText}>Where DFW learns</div>
           </header>
         </section>

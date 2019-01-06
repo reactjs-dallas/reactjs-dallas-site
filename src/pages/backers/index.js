@@ -6,8 +6,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import Layout from '../../components/layout';
-import ReactDallasLogoSection from '../components/shared/ReactDallasLogoSection';
-import withRoot from '../utils/withRoot';
+import ReactDallasLogoSection from '../../components/shared/ReactDallasLogoSection';
+import withRoot from '../../utils/withRoot';
 
 // Local Variables
 const propTypes = {
@@ -32,13 +32,16 @@ const styles = theme => ({
     color: theme.palette.common.white,
     fontWeight: 100,
   },
+  heroTitle: {
+    color: '#61dafb',
+  },
   root: {
     textAlign: 'center',
   },
 });
 
 // Component Definition
-const BackersPage = ({ classes, data }) => {
+const Backers = ({ classes, data }) => {
   return (
     <Layout>
       <div className={classes.root}>
@@ -59,7 +62,9 @@ const BackersPage = ({ classes, data }) => {
   );
 };
 
-export default withRoot(withStyles(styles)(BackersPage));
+Backers.propTypes = propTypes;
+
+export default withRoot(withStyles(styles)(Backers));
 
 export const query = graphql`
   query {

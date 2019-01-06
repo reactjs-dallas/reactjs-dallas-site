@@ -1,50 +1,59 @@
 // External Dependencies
+import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from 'gatsby';
+import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
-import ReactDallasLogoSection from '../components/shared/ReactDallasLogoSection';
 import Layout from '../components/layout';
+import ReactDallasLogoSection from '../components/shared/ReactDallasLogoSection';
+import withRoot from '../utils/withRoot';
 
 // Local Variables
-const rootStyles = {
-  textAlign: 'center'
+const propTypes = {
+  classes: PropTypes.shape({
+    content: PropTypes.string.isRequired,
+    heroContainer: PropTypes.string.isRequired,
+    heroText: PropTypes.string.isRequired,
+    root: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
-const heroContainerStyles = {
-  background: '#282C34',
-  padding: '2rem',
-};
-
-const heroTitleStyles = {
-  color: '#61dafb',
-};
-
-const heroTextStyles = {
-  color: 'white',
-  fontWeight: 100,
-};
-
-const contentStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  padding: '3.5rem 0',
-}
+const styles = theme => ({
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    padding: '3.5rem 0',
+  },
+  heroContainer: {
+    background: '#282C34',
+    padding: '2rem',
+  },
+  heroText: {
+    color: theme.palette.common.white,
+    fontWeight: 100,
+  },
+  heroTitle: {
+    color: '#61dafb',
+  },
+  root: {
+    textAlign: 'center',
+  },
+});
 
 // Component Definition
-const IndexPage = () => {
+const Events = ({ classes }) => {
   return (
     <Layout>
-      <div css={rootStyles}>
-        <section css={heroContainerStyles}>
+      <div className={classes.root}>
+        <section className={classes.heroContainer}>
           <header>
-            <h1 css={heroTitleStyles}>Events</h1>
-            <div css={heroTextStyles}>Where DFW meets</div>
+            <h1 className={classes.heroTitle}>Events</h1>
+            <div className={classes.heroText}>Where DFW meets</div>
           </header>
         </section>
 
-        <section css={contentStyles}>
+        <section className={classes.content}>
           <h3>December 2018</h3>
           <h4>ReactJS @ BottleRocket</h4>
           <div>6:15 - 7:00pm: Pizza/Drinks & meeting other people</div>
@@ -63,4 +72,6 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+Events.propTypes = propTypes;
+
+export default withRoot(withStyles(styles)(Events));
