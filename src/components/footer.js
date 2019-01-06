@@ -1,74 +1,94 @@
 // External Dependencies
+import PropTypes from 'prop-types';
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import FacebookSvg from './shared/icons/facebook.svg';
 import SlackSvg from './shared/icons/slack.svg';
 import TwitterSvg from './shared/icons/twitter.svg';
+import withRoot from '../utils/withRoot';
 
 // Local Variables
-const iconContainerStyles = {
-  margin: '0 16px',
+const propTypes = {
+  classes: PropTypes.shape({
+    media: PropTypes.string.isRequired,
+    mediaContainer: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
-const iconStyles = {
-  height: 32,
-  width: 32,
-};
+const styles = theme => ({
+  footer: {
+    background: '#20232A',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '1rem',
+  },
+  footerContent: {
+    display: 'flex',
+    fontFamily: 'Roboto',
+    justifyContent: 'center',
+    margin: '0 auto',
+    maxWidth: 960,
+    padding: '0.5rem',
+  },
+  icon: {
+    height: 32,
+    width: 32,
+  },
+  iconContainer: {
+    margin: '0 16px',
+  },
+  link: {
+    color: 'white',
+    textDecoration: 'none',
+  },
+  copyright: {
+    color: theme.palette.grey[300],
+    fontSize: 15,
+  },
+});
 
 // Component Definition
-const Footer = ({ siteTitle }) => (
-  <footer
-    css={{
-      background: '#20232A',
-    }}
-  >
-    <div
-      css={{
-        fontFamily: 'Roboto',
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1rem',
-        display: 'flex',
-        justifyContent: 'center',
-      }}
-    >
-      <div style={iconContainerStyles}>
+const Footer = ({
+  classes,
+  siteTitle,
+}) => (
+  <footer className={classes.footer}>
+    <div className={classes.footerContent}>
+      <div className={classes.iconContainer}>
         <a
+          className={classes.link}
           href="https://join.slack.com/t/reactjs-dallas/shared_invite/enQtMzQ0NDY2NDQ3MzQ3LWI3NmM1ZWRhZTJiOWE4OTFiMTA0MWJlYWVhZWIxZjdkZTRiZGI0OWViZGFiMjhjYjdlMGI2NTBhMWYzNDJkODA"
-          css={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
         >
-          <SlackSvg style={iconStyles} />
+          <SlackSvg className={classes.icon} />
         </a>
-
       </div>
-      <div style={iconContainerStyles}>
+      <div className={classes.iconContainer}>
         <a
+          className={classes.link}
           href="https://twitter.com/reactjsdallas"
-          css={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
         >
-          <TwitterSvg style={iconStyles} />
+          <TwitterSvg className={classes.icon} />
         </a>
       </div>
-      <div css={iconContainerStyles}>
+      <div className={classes.iconContainer}>
         <a
+          className={classes.link}
           href="https://www.facebook.com/reactjsdallas"
-          css={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
         >
-          <FacebookSvg style={iconStyles} />
+          <FacebookSvg className={classes.icon} />
         </a>
       </div>
+    </div>
+    <div className={classes.copyright}>
+      &copy; 2018-2019 ReactJS Dallas User Group. All Rights Reserved.
     </div>
   </footer>
 );
 
-export default Footer;
+Footer.propTypes = propTypes;
+
+export default withRoot(withStyles(styles)(Footer));
