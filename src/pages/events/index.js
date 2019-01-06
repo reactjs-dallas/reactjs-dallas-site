@@ -1,15 +1,15 @@
 // External Dependencies
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import PropTypes from 'prop-types';
 import React from 'react';
+// import Tab from '@material-ui/core/Tab';
+// import Tabs from '@material-ui/core/Tabs';
 import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
-import Layout from '../components/layout';
-import ReactDallasLogoSection from '../components/shared/ReactDallasLogoSection';
-import withRoot from '../utils/withRoot';
+import Layout from '../../components/layout';
+import ReactDallasLogoSection from '../../components/shared/ReactDallasLogoSection';
+import Upcoming from './upcoming';
+import withRoot from '../../utils/withRoot';
 
 // Local Variables
 const propTypes = {
@@ -39,16 +39,6 @@ const styles = theme => ({
   heroTitle: {
     color: '#61dafb',
   },
-  media: {
-    height: '50%',
-    width: '50%',
-  },
-  mediaContainer: {
-    background: '#f1f1f1',
-    display: 'flex',
-    justifyContent: 'center',
-    paddingTop: 24,
-  },
   root: {
     textAlign: 'center',
   },
@@ -67,27 +57,7 @@ const Events = ({ classes }) => {
         </section>
 
         <section className={classes.content}>
-          <Card>
-            <div className={classes.mediaContainer}>
-              <CardMedia
-                alt="Bottle Rocket Logo"
-                className={classes.media}
-                component="img"
-                image="https://www.bottlerocketstudios.com/assets/br-logo.png"
-                title="Bottle Rocket Logo"
-              />
-            </div>
-            <CardContent>
-              <h3>December 2018</h3>
-              <h4>ReactJS @ BottleRocket</h4>
-              <div>Morgan Dedmon — WASM: What is that?</div>
-              <div>Salvador Aceves — Redux Sagas in Practice</div>
-
-              <p style={{ marginTop: 12 }}>
-                <a href="https://www.meetup.com/ReactJSDallas/events/pbbdwnyxqbpb/">View on meetup.com</a>
-              </p>
-            </CardContent>
-          </Card>
+          <Upcoming />
         </section>
 
         <ReactDallasLogoSection />
