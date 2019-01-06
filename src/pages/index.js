@@ -64,7 +64,7 @@ const IndexPage = ({
         <section className={classes.content}>
           <p>Welcome to the DFW React Community!</p>
           <p>Now go build something great</p>
-          <p>And show someone else how to do it, too! 🤓</p>
+          <p>And show someone else how to do it, too!</p>
           {/* <Link to="/signup/">Go to sign up</Link> */}
         </section>
 

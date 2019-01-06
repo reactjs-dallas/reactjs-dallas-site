@@ -44,7 +44,7 @@ const SignUpPage = () => (
       </section>
 
       <section css={contentStyles}>
-        <p>🔥 Sign up for a new Firebase login. 🔥</p>
+        <p>Sign up for a new Firebase login.</p>
         <SignUpForm />
       </section>
 
