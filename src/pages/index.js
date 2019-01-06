@@ -14,6 +14,7 @@ const propTypes = {
     content: PropTypes.string.isRequired,
     heroContainer: PropTypes.string.isRequired,
     heroText: PropTypes.string.isRequired,
+    heroTitle: PropTypes.string.isRequired,
     root: PropTypes.string.isRequired,
   }).isRequired,
 };

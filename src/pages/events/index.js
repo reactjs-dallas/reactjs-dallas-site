@@ -1,16 +1,16 @@
 // External Dependencies
+import CalendarToday from '@material-ui/icons/CalendarToday';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import CalendarToday from '@material-ui/icons/CalendarToday';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import Layout from '../../components/layout';
-import ReactDallasLogoSection from '../../components/shared/ReactDallasLogoSection';
 import Past from './past';
+import ReactDallasLogoSection from '../../components/shared/ReactDallasLogoSection';
 import Upcoming from './upcoming';
 import withRoot from '../../utils/withRoot';
 
@@ -45,6 +45,7 @@ class Events extends Component {
       content: PropTypes.string.isRequired,
       heroContainer: PropTypes.string.isRequired,
       heroText: PropTypes.string.isRequired,
+      heroTitle: PropTypes.string.isRequired,
       root: PropTypes.string.isRequired,
     }).isRequired,
   };
