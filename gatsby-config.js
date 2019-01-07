@@ -18,5 +18,6 @@ module.exports = {
     `gatsby-transformer-remark`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-glamor',
+    `gatsby-plugin-remove-serviceworker`,
   ],
 };
