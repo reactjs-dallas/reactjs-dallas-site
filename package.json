@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Mike Mathew <m2mathew@me.com>",
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
     "@material-ui/core": "^3.6.1",
     "@material-ui/icons": "^3.0.1",
     "dotenv": "^6.1.0",
