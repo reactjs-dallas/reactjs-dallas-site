@@ -1,11 +1,29 @@
 // External Dependencies
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { navigate } from 'gatsby';
+import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import { auth, db } from '../firebase';
+import withRoot from '../utils/withRoot';
 
 // Local Variables
+const propTypes = {
+  classes: PropTypes.shape({
+    root: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+const styles = {
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: 350,
+  },
+};
+
 const INITIAL_STATE = {
   username: '',
   email: '',
@@ -13,13 +31,6 @@ const INITIAL_STATE = {
   passwordTwo: '',
   error: null,
 };
-
-const rootStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  maxWidth: 350,
-}
 
 // Local Functions
 const byPropKey = (propertyName, value) => () => ({
@@ -62,6 +73,10 @@ class SignUpForm extends Component {
 
   render() {
     const {
+      classes,
+    } = this.props;
+
+    const {
       username,
       email,
       passwordOne,
@@ -77,32 +92,32 @@ class SignUpForm extends Component {
 
     return (
       <form
-        css={rootStyles}
+        className={classes.root}
         onSubmit={this.onSubmit}
       >
         <input
-          value={username}
           onChange={event => this.setState(byPropKey('username', event.target.value))}
-          type="text"
           placeholder="Full Name"
-        />
-        <input
-          value={email}
-          onChange={event => this.setState(byPropKey('email', event.target.value))}
           type="text"
+          value={username}
+        />
+        <input
+          onChange={event => this.setState(byPropKey('email', event.target.value))}
           placeholder="Email Address"
+          type="text"
+          value={email}
         />
         <input
-          value={passwordOne}
           onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
-          type="password"
           placeholder="Password"
+          type="password"
+          value={passwordOne}
         />
         <input
-          value={passwordTwo}
           onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
-          type="password"
           placeholder="Confirm Password"
+          type="password"
+          value={passwordTwo}
         />
         <button disabled={isInvalid} type="submit">
           Sign Up
@@ -114,4 +129,4 @@ class SignUpForm extends Component {
   }
 }
 
-export default SignUpForm;
+export default withRoot(withStyles(styles)(SignUpForm));
