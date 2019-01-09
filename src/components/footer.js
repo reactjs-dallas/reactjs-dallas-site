@@ -12,12 +12,20 @@ import withRoot from '../utils/withRoot';
 // Local Variables
 const propTypes = {
   classes: PropTypes.shape({
-    media: PropTypes.string.isRequired,
-    mediaContainer: PropTypes.string.isRequired,
+    copyright: PropTypes.string.isRequired,
+    footer: PropTypes.string.isRequired,
+    footerContent: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    iconContainer: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
   }).isRequired,
 };
 
 const styles = theme => ({
+  copyright: {
+    color: theme.palette.grey[300],
+    fontSize: 15,
+  },
   footer: {
     background: '#20232A',
     display: 'flex',
@@ -44,10 +52,6 @@ const styles = theme => ({
   link: {
     color: 'white',
     textDecoration: 'none',
-  },
-  copyright: {
-    color: theme.palette.grey[300],
-    fontSize: 15,
   },
 });
 

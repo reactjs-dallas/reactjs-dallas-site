@@ -51,9 +51,11 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    db.onceGetUsers().then(snapshot =>
-      this.setState(() => ({ users: fromObjectToList(snapshot.val()) }))
-    );
+    if (typeof window !== 'undefined') {
+      db.onceGetUsers().then(snapshot =>
+        this.setState(() => ({ users: fromObjectToList(snapshot.val()) }))
+      );
+      }
   }
 
   render() {

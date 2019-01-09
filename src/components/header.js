@@ -1,65 +1,69 @@
 // External Dependencies
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'gatsby';
+import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import ReactLogoSvg from '../images/react-logo.svg';
 
 // Local Variables
-const reactLogoStyles = {
-  width: 24,
-  height: 24,
-  transform: 'translateY(6px)',
-  marginRight: 8,
+const propTypes = {
+  classes: PropTypes.shape({
+    logo: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+const styles = {
+  link: {
+    color: 'white',
+    textDecoration: 'none',
+  },
+  logo: {
+    height: 24,
+    marginRight: 8,
+    transform: 'translateY(6px)',
+    width: 24,
+  },
+  nav: {
+    alignItems: 'baseline',
+    display: 'flex',
+    fontFamily: 'Roboto',
+    justifyContent: 'space-around',
+    margin: '0 auto',
+    maxWidth: 960,
+    padding: '1rem',
+  },
+  root: {
+    background: '#20232A',
+  },
 };
 
 // Component Definition
-const Header = ({ siteTitle }) => (
-  <div
-    css={{
-      background: '#20232A',
-    }}
-  >
-    <div
-      css={{
-        fontFamily: 'Roboto',
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1rem',
-        display: 'flex',
-        alignItems: 'baseline',
-        justifyContent: 'space-around',
-      }}
-    >
+const Header = ({ classes, siteTitle }) => (
+  <div className={classes.root}>
+    <div className={classes.nav}>
       <div>
         <Link
+          className={classes.link}
           to="/"
-          css={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
         >
-          <ReactLogoSvg style={reactLogoStyles} /> {siteTitle}
+          <ReactLogoSvg className={classes.logo} /> {siteTitle}
         </Link>
       </div>
       <div>
         <Link
+          className={classes.link}
           to="/events"
-          css={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
         >
           Events
         </Link>
       </div>
       <div>
         <Link
+          className={classes.link}
           to="/backers"
-          css={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
         >
           Backers
         </Link>
@@ -68,4 +72,6 @@ const Header = ({ siteTitle }) => (
   </div>
 );
 
-export default Header;
+Header.propTypes = propTypes;
+
+export default withStyles(styles)(Header);
