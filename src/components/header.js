@@ -6,12 +6,15 @@ import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import ReactLogoSvg from '../images/react-logo.svg';
+import withRoot from '../utils/withRoot';
 
 // Local Variables
 const propTypes = {
   classes: PropTypes.shape({
+    link: PropTypes.string.isRequired,
     logo: PropTypes.string.isRequired,
-    logo: PropTypes.string.isRequired,
+    nav: PropTypes.string.isRequired,
+    root: PropTypes.string.isRequired,
   }).isRequired,
 };
 
@@ -74,4 +77,4 @@ const Header = ({ classes, siteTitle }) => (
 
 Header.propTypes = propTypes;
 
-export default withStyles(styles)(Header);
+export default withRoot(withStyles(styles)(Header));
