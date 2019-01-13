@@ -1,4 +1,5 @@
 // External Dependencies
+import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -40,8 +41,8 @@ const styles = theme => ({
     justifyContent: 'center',
     paddingTop: 24,
   },
-  meetupLink: {
-    marginTop: 12,
+  button: {
+    marginTop: 16,
   },
 });
 
@@ -78,9 +79,13 @@ const EventCard = ({
         <div>{speaker1}</div>
         <div>{speaker2}</div>
 
-        <p className={classes.meetupLink}>
-          <a href={meetupLink}>View on meetup.com</a>
-        </p>
+        <Button
+          className={classes.button}
+          href={meetupLink}
+          variant="contained"
+        >
+          View on Meetup
+        </Button>
       </CardContent>
     </Card>
   );
