@@ -38,11 +38,7 @@ const Upcoming = ({ classes }) => {
     />
   ));
 
-  return (
-    <Fragment>
-      {upcomingEvents}
-    </Fragment>
-  );
+  return upcomingEvents;
 };
 
 Upcoming.propTypes = propTypes;

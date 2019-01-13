@@ -10,9 +10,10 @@ import { withStyles } from '@material-ui/core/styles';
 // Local Variables
 const propTypes = {
   classes: PropTypes.shape({
+    card: PropTypes.string.isRequired,
     media: PropTypes.string.isRequired,
     mediaContainer: PropTypes.string.isRequired,
-    meetupLink: PropTypes.string.isRequired,
+    button: PropTypes.string.isRequired,
   }).isRequired,
   date: PropTypes.string.isRequired,
   imageBackgroundColor: PropTypes.string,
@@ -29,6 +30,7 @@ const defaultProps = {
 
 const styles = theme => ({
   card: {
+    marginBotton: 32,
     maxWidth: 600,
   },
   media: {
