@@ -3,14 +3,14 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 // Local Variables
 const propTypes = {
   classes: PropTypes.shape({
     media: PropTypes.string.isRequired,
-    mediaContainer: PropTypes.string.isRequired,
+    pastMediaContainer  : PropTypes.string.isRequired,
   }).isRequired,
 };
 
@@ -30,27 +30,29 @@ const styles = theme => ({
 // Component Definition
 const Past = ({ classes }) => {
   return (
-    <Card>
-      <div className={classes.pastMediaContainer}>
-        <CardMedia
-          alt="Bottle Rocket Logo"
-          className={classes.media}
-          component="img"
-          image="https://www.bottlerocketstudios.com/assets/br-logo.png"
-          title="Bottle Rocket Logo"
-        />
-      </div>
-      <CardContent>
-        <h3>December 2018</h3>
-        <h4>ReactJS @ BottleRocket</h4>
-        <div>Morgan Dedmon — WASM: What is that?</div>
-        <div>Salvador Aceves — Redux Sagas in Practice</div>
+    <Fragment>
+      <Card>
+        <div className={classes.pastMediaContainer}>
+          <CardMedia
+            alt="Bottle Rocket Logo"
+            className={classes.media}
+            component="img"
+            image="https://www.bottlerocketstudios.com/assets/br-logo.png"
+            title="Bottle Rocket Logo"
+          />
+        </div>
+        <CardContent>
+          <h3>December 2018</h3>
+          <h4>ReactJS @ BottleRocket</h4>
+          <div>Morgan Dedmon — WASM: What is that?</div>
+          <div>Salvador Aceves — Redux Sagas in Practice</div>
 
-        <p style={{ marginTop: 12 }}>
-          <a href="https://www.meetup.com/ReactJSDallas/events/pbbdwnyxqbpb/">View on meetup.com</a>
-        </p>
-      </CardContent>
-    </Card>
+          <p style={{ marginTop: 12 }}>
+            <a href="https://www.meetup.com/ReactJSDallas/events/pbbdwnyxqbpb/">View on meetup.com</a>
+          </p>
+        </CardContent>
+      </Card>
+    </Fragment>
   );
 };
 
