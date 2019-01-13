@@ -13,24 +13,13 @@ import { events } from '../../utils/constants';
 // Local Variables
 const propTypes = {
   classes: PropTypes.shape({
-    media: PropTypes.string.isRequired,
-    mediaContainer: PropTypes.string.isRequired,
+    root: PropTypes.string.isRequired,
   }).isRequired,
 };
 
 const styles = theme => ({
-  card: {
+  root: {
     maxWidth: 600,
-  },
-  media: {
-    height: '50%',
-    width: '50%',
-  },
-  upcomingMediaContainer: {
-    background: '#0a0a0a',
-    display: 'flex',
-    justifyContent: 'center',
-    paddingTop: 24,
   },
 });
 
@@ -39,6 +28,8 @@ const Upcoming = ({ classes }) => {
   const upcomingEvents = events.map(event => (
     <EventCard
       date={event.date}
+      key={event.date}
+      imageBackgroundColor={event.imageBackgroundColor}
       imageLink={event.imageLink}
       meetupLink={event.meetupLink}
       speaker1={event.speaker1}
@@ -50,26 +41,6 @@ const Upcoming = ({ classes }) => {
   return (
     <Fragment>
       {upcomingEvents}
-      <Card className={classes.card}>
-        <div className={classes.upcomingMediaContainer}>
-          <CardMedia
-            alt="The Dallas Morning News Logo"
-            className={classes.media}
-            component="img"
-            image="https://www.belomediagroup.com/wp-content/uploads/2017/06/TheDallasMorningNews_white-768x210.png"
-            title="The Dallas Morning News Logo"
-          />
-        </div>
-        <CardContent>
-          <h3>January 2019</h3>
-          <h4>ReactJS @ The Dallas Morning News Headquarters</h4>
-          <div>Mike Orren — Why React is big news for local news</div>
-
-          <p style={{ marginTop: 12 }}>
-            <a href="https://www.meetup.com/ReactJSDallas/events/pbbdwnyzcblb/">View on meetup.com</a>
-          </p>
-        </CardContent>
-      </Card>
     </Fragment>
   );
 };

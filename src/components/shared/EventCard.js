@@ -14,11 +14,16 @@ const propTypes = {
     meetupLink: PropTypes.string.isRequired,
   }).isRequired,
   date: PropTypes.string.isRequired,
+  imageBackgroundColor: PropTypes.string,
   imageLink: PropTypes.string.isRequired,
   meetupLink: PropTypes.string.isRequired,
   speaker1: PropTypes.string.isRequired,
   speaker2: PropTypes.string.isRequired,
   venue: PropTypes.string.isRequired,
+};
+
+const defaultProps = {
+  imageBackgroundColor: null,
 };
 
 const styles = theme => ({
@@ -44,6 +49,7 @@ const styles = theme => ({
 const EventCard = ({
   classes,
   date,
+  imageBackgroundColor,
   imageLink,
   meetupLink,
   speaker1,
@@ -52,7 +58,12 @@ const EventCard = ({
 }) => {
   return (
     <Card className={classes.card}>
-      <div className={classes.pastMediaContainer}>
+      <div
+        className={classes.mediaContainer}
+        style={{
+          background: imageBackgroundColor,
+        }}
+      >
         <CardMedia
           alt={`${venue} Logo`}
           className={classes.media}
@@ -76,5 +87,6 @@ const EventCard = ({
 };
 
 EventCard.propTypes = propTypes;
+EventCard.defaultProps = defaultProps;
 
 export default withStyles(styles)(EventCard);
