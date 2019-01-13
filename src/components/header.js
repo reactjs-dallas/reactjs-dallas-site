@@ -6,7 +6,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import ReactLogoSvg from '../images/react-logo.svg';
-import withRoot from '../utils/withRoot';
 
 // Local Variables
 const propTypes = {
@@ -77,4 +76,4 @@ const Header = ({ classes, siteTitle }) => (
 
 Header.propTypes = propTypes;
 
-export default withRoot(withStyles(styles)(Header));
+export default withStyles(styles)(Header);

@@ -6,9 +6,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
-// Internal Dependencies
-import withRoot from '../../utils/withRoot';
-
 // Local Variables
 const propTypes = {
   classes: PropTypes.shape({
@@ -59,4 +56,4 @@ const Past = ({ classes }) => {
 
 Past.propTypes = propTypes;
 
-export default withRoot(withStyles(styles)(Past));
+export default withStyles(styles)(Past);

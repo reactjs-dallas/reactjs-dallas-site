@@ -5,7 +5,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import DallasLogoSvg from '../../images/reactjs-dallas-icon.svg';
-import withRoot from '../../utils/withRoot';
 
 // Local Variables
 const propTypes = {
@@ -37,4 +36,4 @@ const ReactDallasLogoSection = ({ classes }) => (
 
 ReactDallasLogoSection.propTypes = propTypes;
 
-export default withRoot(withStyles(styles)(ReactDallasLogoSection));
+export default withStyles(styles)(ReactDallasLogoSection);

@@ -6,7 +6,6 @@ import { withStyles } from '@material-ui/core/styles';
 // Internal Dependencies
 import Layout from '../components/layout';
 import ReactDallasLogoSection from '../components/shared/ReactDallasLogoSection';
-import withRoot from '../utils/withRoot';
 
 // Local Variables
 const propTypes = {
@@ -78,4 +77,4 @@ const IndexPage = ({
 
 IndexPage.propTypes = propTypes;
 
-export default withRoot(withStyles(styles)(IndexPage));
+export default withStyles(styles)(IndexPage);

@@ -12,7 +12,6 @@ import Layout from '../../components/layout';
 import Past from './past';
 import ReactDallasLogoSection from '../../components/shared/ReactDallasLogoSection';
 import Upcoming from './upcoming';
-import withRoot from '../../utils/withRoot';
 
 // Local Variables
 const styles = theme => ({
@@ -114,4 +113,4 @@ class Events extends Component {
   }
 }
 
-export default withRoot(withStyles(styles)(Events));
+export default withStyles(styles)(Events);

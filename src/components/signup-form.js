@@ -6,7 +6,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import { auth, db } from '../firebase';
-import withRoot from '../utils/withRoot';
 
 // Local Variables
 const propTypes = {
@@ -129,4 +128,6 @@ class SignUpForm extends Component {
   }
 }
 
-export default withRoot(withStyles(styles)(SignUpForm));
+SignUpForm.propTypes = propTypes;
+
+export default withStyles(styles)(SignUpForm);

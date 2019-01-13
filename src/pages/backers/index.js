@@ -7,7 +7,6 @@ import { withStyles } from '@material-ui/core/styles';
 // Internal Dependencies
 import Layout from '../../components/layout';
 import ReactDallasLogoSection from '../../components/shared/ReactDallasLogoSection';
-import withRoot from '../../utils/withRoot';
 
 // Local Variables
 const propTypes = {
@@ -65,7 +64,7 @@ const Backers = ({ classes, data }) => {
 
 Backers.propTypes = propTypes;
 
-export default withRoot(withStyles(styles)(Backers));
+export default withStyles(styles)(Backers);
 
 export const query = graphql`
   query {

@@ -7,7 +7,6 @@ import { withStyles } from '@material-ui/core/styles';
 import FacebookSvg from './shared/icons/facebook.svg';
 import SlackSvg from './shared/icons/slack.svg';
 import TwitterSvg from './shared/icons/twitter.svg';
-import withRoot from '../utils/withRoot';
 
 // Local Variables
 const propTypes = {
@@ -95,4 +94,4 @@ const Footer = ({
 
 Footer.propTypes = propTypes;
 
-export default withRoot(withStyles(styles)(Footer));
+export default withStyles(styles)(Footer);
