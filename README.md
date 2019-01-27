@@ -22,7 +22,7 @@ The default Gatsby starter.
 
 ## Development Setup
 
-1. Clone Repository: `git clone --depth=1 https://github.com/<your-username>/reactjs-dallas-site.git`
+1. Fork and Clone Repository: `git clone --depth=1 https://github.com/<your-username>/reactjs-dallas-site.git`
 2. Setup up repo and install dependencies: `yarn`
 3. Create a new firebase project
   1. Navigate to firebase.google.com
