@@ -24,12 +24,7 @@ The default Gatsby starter.
 
 1. Fork and Clone Repository: `git clone --depth=1 https://github.com/<your-username>/reactjs-dallas-site.git`
 2. Setup up repo and install dependencies: `yarn`
-3. Create a new firebase project
-  1. Navigate to firebase.google.com
-  2. Click 'Get Started'
-  3. Click 'Add Project'
-  4. Enter project information and click 'Create Project'
-  5. In the project overview screen, click '</>' icon to get your API Key and other variables.
+3. Create a new firebase project, in the overview screen click '</>' to find API key and other variables
 4. Create a .env file with the following variables (use the variables from your firebase project):
 ```
 GATSBY_FIREBASE_API_KEY=
