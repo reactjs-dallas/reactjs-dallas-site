@@ -87,7 +87,7 @@ const Footer = ({
       </div>
     </div>
     <div className={classes.copyright}>
-      &copy; 2018-2019 ReactJS Dallas User Group. All Rights Reserved.
+      &copy; 2019 ReactJS Dallas User Group. All Rights Reserved.
     </div>
   </footer>
 );
