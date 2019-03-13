@@ -30,7 +30,8 @@ const defaultProps = {
 
 const styles = theme => ({
   card: {
-    marginBotton: 32,
+    // marginBotton: 32,
+    margin: '12px 0',
     maxWidth: 600,
   },
   media: {
@@ -83,6 +84,7 @@ const EventCard = ({
 
         <Button
           className={classes.button}
+          color="primary"
           href={meetupLink}
           variant="contained"
         >

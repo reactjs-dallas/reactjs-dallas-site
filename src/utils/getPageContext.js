@@ -2,8 +2,8 @@
 
 import { SheetsRegistry } from 'jss';
 import { createMuiTheme, createGenerateClassName } from '@material-ui/core/styles';
+import indigo from '@material-ui/core/colors/indigo';
 import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
 
 const defaultTheme = createMuiTheme();
 
@@ -14,14 +14,14 @@ const theme = createMuiTheme({
   palette: {
     ...defaultTheme.palette,
     primary: {
+      light: indigo[300],
+      main: indigo[500],
+      dark: indigo[700],
+    },
+    secondary: {
       light: purple[300],
       main: purple[500],
       dark: purple[700],
-    },
-    secondary: {
-      light: green[300],
-      main: green[500],
-      dark: green[700],
     },
   },
   typography: {
