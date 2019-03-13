@@ -3,6 +3,14 @@
   "description": "Internet website for the ReactJS Dallas User Group",
   "version": "1.0.0",
   "author": "Mike Mathew <m2mathew@me.com>",
+  "engines": {
+    "node": "^8.15.1",
+    "npm": "6.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactjs-dallas/reactjs-dallas-site"
+  },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "@material-ui/core": "^3.6.1",
@@ -18,8 +26,8 @@
     "glamor": "^2.20.40",
     "jss": "latest",
     "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-jss": "^8.1.0"
   },
@@ -35,9 +43,5 @@
   },
   "devDependencies": {
     "prettier": "^1.15.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/reactjs-dallas/reactjs-dallas-site"
   }
 }
