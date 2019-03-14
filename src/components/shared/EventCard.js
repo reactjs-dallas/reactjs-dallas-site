@@ -30,7 +30,6 @@ const defaultProps = {
 
 const styles = theme => ({
   card: {
-    // marginBotton: 32,
     margin: '12px 0',
     maxWidth: 600,
   },
