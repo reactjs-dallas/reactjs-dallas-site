@@ -42,8 +42,8 @@ export const futureEventData = [
     date: 'April 2019',
     imageLink: 'https://www.lifeblue.com/resources/motif/images/lb-full-logo.svg',
     meetupLink: 'https://www.meetup.com/ReactJSDallas/events/pbbdwnyzgbmb/',
-    speaker1: 'TBD',
-    speaker2: 'Leslie Cohn-Wein - TBD (about JAMstack)',
+    speaker1: 'Patrick Hulce - Chrome Internals: How do all these tools work anyway?',
+    speaker2: 'Leslie Cohn-Wein - Spreading the JAM: Getting started with the JAMstack using Gatsby and Netlify Forms',
     venue: "Lifeblue",
   },
 ];
