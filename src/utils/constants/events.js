@@ -2,7 +2,7 @@ export const pastEventData = [
   {
     imageBackgroundColor: null,
     date: 'March 2019',
-    imageLink: 'http://www.lifeatmatch.com/wp-content/uploads/2018/11/logo_lifeatmatch-new.png',
+    imageLink: 'https://www.lifeatmatch.com/wp-content/uploads/2018/11/logo_lifeatmatch-new.png',
     meetupLink: 'https://www.meetup.com/ReactJSDallas/events/pbbdwnyzfbqb/',
     speaker1: 'Austin Chappell - Testing with Jest/Enzyme',
     speaker2: 'Joey Kreft -Separation of Concerns in Component Architecture',
