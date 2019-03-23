@@ -1,17 +1,36 @@
 // External Dependencies
-import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
-import Header from './header';
 import Footer from './footer';
+import Header from './header';
 import withAuthentication from './session/withAuthentication';
+import withRoot from '../utils/withRoot';
 import './layout.css';
 
+// Local Variables
+const propTypes = {
+  classes: PropTypes.shape({
+    childrenContainer: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+const styles = {
+  childrenContainer: {
+    margin: '0 auto',
+    padding: 0,
+  },
+  main: {
+    minHeight: '100vh'
+  },
+};
+
 // Component Definition
-const Layout = ({ children }) => (
+const Layout = ({ children, classes }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -27,7 +46,6 @@ const Layout = ({ children }) => (
       // SHORT SYNTAX FOR REACT FRAGMENT
       <>
         <Helmet
-          title={data.site.siteMetadata.title}
           meta={[
             {
               name: 'description',
@@ -39,6 +57,7 @@ const Layout = ({ children }) => (
                 'react, reactjs, JavaScript, frontend, web development, dallas',
             },
           ]}
+          title={data.site.siteMetadata.title}
         >
           <html lang="en" />
           <link
@@ -46,14 +65,9 @@ const Layout = ({ children }) => (
             rel="stylesheet"
           />
         </Helmet>
-        <main style={{ minHeight: '100vh' }}>
+        <main className={classes.main}>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <div
-            style={{
-              margin: '0 auto',
-              minHeight: '92vh',
-              padding: 0,
-            }}
+          <div className={classes.childrenContainer}
           >
             {children}
           </div>
@@ -64,8 +78,6 @@ const Layout = ({ children }) => (
   />
 );
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+Layout.propTypes = propTypes;
 
-export default withAuthentication(Layout);
+export default withRoot(withStyles(styles)(withAuthentication(Layout)));

@@ -1,76 +1,70 @@
 // External Dependencies
+import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  graphql,
-  Link,
-} from 'gatsby';
+import { graphql } from 'gatsby';
+import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import Layout from '../../components/layout';
-import DallasLogoSvg from '../../images/reactjs-dallas-icon.svg';
+import ReactDallasLogoSection from '../../components/shared/ReactDallasLogoSection';
 
 // Local Variables
-const rootStyles = {
-  textAlign: 'center'
+const propTypes = {
+  classes: PropTypes.shape({
+    content: PropTypes.string.isRequired,
+    heroContainer: PropTypes.string.isRequired,
+    heroText: PropTypes.string.isRequired,
+    heroTitle: PropTypes.string.isRequired,
+    root: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
-const heroContainerStyles = {
-  background: '#282C34',
-  padding: '2rem',
-};
-
-const heroTitleStyles = {
-  color: '#61dafb',
-};
-
-const heroTextStyles = {
-  color: 'white',
-  fontWeight: 100,
-};
-
-const contentStyles = {
-  textAlign: 'left',
-  padding: '3.5rem',
-}
-
-const dallasLogoContainerStyles = {
-  background: '#B9B9B9',
-  display: 'flex',
-  justifyContent: 'center',
-  padding: 64,
-}
-
-const dallasLogoStyles = {
-  width: 128,
-  height: 128,
-};
+const styles = theme => ({
+  content: {
+    textAlign: 'left',
+    padding: '3.5rem',
+  },
+  heroContainer: {
+    background: '#282C34',
+    padding: '2rem',
+  },
+  heroText: {
+    color: theme.palette.common.white,
+    fontWeight: 100,
+  },
+  heroTitle: {
+    color: '#61dafb',
+  },
+  root: {
+    textAlign: 'center',
+  },
+});
 
 // Component Definition
-const BackersPage = ({ data }) => {
-  console.log('data →', data);
+const Backers = ({ classes, data }) => {
   return (
     <Layout>
-      <div css={rootStyles}>
-        <section css={heroContainerStyles}>
+      <div className={classes.root}>
+        <section className={classes.heroContainer}>
           <header>
-            <h1 css={heroTitleStyles}>Sponsors & Backers</h1>
-            <div css={heroTextStyles}>Where DFW supports</div>
+            <h1 className={classes.heroTitle}>Sponsors & Backers</h1>
+            <div className={classes.heroText}>Where DFW supports</div>
           </header>
         </section>
 
-        <section css={contentStyles}>
+        <section className={classes.content}>
           <div dangerouslySetInnerHTML={{ __html: data.allMarkdownRemark.edges[0].node.html }} />
         </section>
 
-        <div css={dallasLogoContainerStyles}>
-          <DallasLogoSvg style={dallasLogoStyles} />
-        </div>
+        <ReactDallasLogoSection />
       </div>
     </Layout>
   );
 };
 
-export default BackersPage;
+Backers.propTypes = propTypes;
+
+export default withStyles(styles)(Backers);
 
 export const query = graphql`
   query {
