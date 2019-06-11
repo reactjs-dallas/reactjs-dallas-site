@@ -4,31 +4,37 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 // Local Variables
 const propTypes = {
   classes: PropTypes.shape({
+    button: PropTypes.string.isRequired,
     card: PropTypes.string.isRequired,
     media: PropTypes.string.isRequired,
     mediaContainer: PropTypes.string.isRequired,
-    button: PropTypes.string.isRequired,
   }).isRequired,
   date: PropTypes.string.isRequired,
   imageBackgroundColor: PropTypes.string,
   imageLink: PropTypes.string.isRequired,
   meetupLink: PropTypes.string.isRequired,
   speaker1: PropTypes.string.isRequired,
-  speaker2: PropTypes.string.isRequired,
+  speaker2: PropTypes.string,
+  speaker3: PropTypes.string,
   venue: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
   imageBackgroundColor: null,
+  speaker2: null,
+  speaker3: null,
 };
 
 const styles = theme => ({
+  button: {
+    marginTop: 16,
+  },
   card: {
     margin: '12px 0',
     maxWidth: 600,
@@ -43,9 +49,6 @@ const styles = theme => ({
     justifyContent: 'center',
     paddingTop: 24,
   },
-  button: {
-    marginTop: 16,
-  },
 });
 
 // Component Definition
@@ -57,6 +60,7 @@ const EventCard = ({
   meetupLink,
   speaker1,
   speaker2,
+  speaker3,
   venue,
 }) => {
   return (
@@ -79,7 +83,8 @@ const EventCard = ({
         <h3>{date}</h3>
         <h4>ReactJS @ {venue}</h4>
         <div>{speaker1}</div>
-        <div>{speaker2}</div>
+        {speaker2 && <div>{speaker2}</div>}
+        {speaker3 && <div>{speaker3}</div>}
 
         <Button
           className={classes.button}
