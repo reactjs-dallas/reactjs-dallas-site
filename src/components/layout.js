@@ -9,7 +9,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Footer from './footer';
 import Header from './header';
 import withAuthentication from './session/withAuthentication';
-import withRoot from '../utils/withRoot';
+// import withRoot from '../utils/withRoot';
 import './layout.css';
 
 // Local Variables
@@ -80,4 +80,5 @@ const Layout = ({ children, classes }) => (
 
 Layout.propTypes = propTypes;
 
-export default withRoot(withStyles(styles)(withAuthentication(Layout)));
+// export default withRoot(withStyles(styles)(withAuthentication(Layout)));
+export default withStyles(styles)(withAuthentication(Layout));
