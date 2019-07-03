@@ -105,7 +105,7 @@ export const futureEventData = [
     imageLink: 'https://res.cloudinary.com/drumsensei/image/upload/v1560256211/intuit-logo_cupxcj.jpg',
     meetupLink: 'https://www.meetup.com/ReactJSDallas/events/pbbdwnyzkbmb/',
     speaker1: 'Travis Baker - Playing Hooky with React: Effectively Use Primitive, Custom, & 3rd Party React Hooks',
-    speaker1: 'Jaime Liz - Generators: How Do They Work & Why Should I Care',
+    speaker2: 'Jaime Liz - Generators: How Do They Work & Why Should I Care',
     venue: "Intuit",
   },
 ];
