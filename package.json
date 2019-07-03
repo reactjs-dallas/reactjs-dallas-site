@@ -21,6 +21,7 @@
     "firebase": "^6.1.1",
     "gatsby": "^2.8.8",
     "gatsby-cli": "^2.6.5",
+    "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-glamor": "^2.0.9",
     "gatsby-plugin-material-ui": "^2.0.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
