@@ -1,6 +1,6 @@
 // Give gatsby access to env keys
 require('dotenv').config({
-  path: `.env`,
+  path: '.env',
 });
 
 module.exports = {
@@ -9,20 +9,21 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-material-ui`,
+      resolve: 'gatsby-plugin-material-ui',
       options: {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src`,
+        name: 'src',
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-remark`,
+    'gatsby-plugin-favicon',
+    'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-glamor',
-    `gatsby-plugin-remove-serviceworker`,
+    'gatsby-plugin-remove-serviceworker',
   ],
 };
