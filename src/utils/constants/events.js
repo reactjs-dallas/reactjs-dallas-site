@@ -1,6 +1,15 @@
 export const pastEventData = [
   {
     imageBackgroundColor: null,
+    date: 'July 2019',
+    imageLink: 'https://res.cloudinary.com/drumsensei/image/upload/v1560256211/intuit-logo_cupxcj.jpg',
+    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/pbbdwnyzkbmb/',
+    speaker1: 'Travis Baker - Playing Hooky with React: Effectively Use Primitive, Custom, & 3rd Party React Hooks',
+    speaker2: 'Jaime Liz - Generators: How Do They Work & Why Should I Care',
+    venue: "Intuit",
+  },
+  {
+    imageBackgroundColor: null,
     date: 'June 2019',
     imageLink: 'https://res.cloudinary.com/drumsensei/image/upload/v1560255997/cea-name-side_xzh2ti.png',
     meetupLink: 'https://www.meetup.com/ReactJSDallas/events/pbbdwnyzjbpb/',
@@ -101,11 +110,11 @@ export const pastEventData = [
 export const futureEventData = [
   {
     imageBackgroundColor: null,
-    date: 'July 2019',
-    imageLink: 'https://res.cloudinary.com/drumsensei/image/upload/v1560256211/intuit-logo_cupxcj.jpg',
-    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/pbbdwnyzkbmb/',
-    speaker1: 'Travis Baker - Playing Hooky with React: Effectively Use Primitive, Custom, & 3rd Party React Hooks',
-    speaker2: 'Jaime Liz - Generators: How Do They Work & Why Should I Care',
-    venue: "Intuit",
+    date: 'August 2019',
+    imageLink: 'https://res.cloudinary.com/drumsensei/image/upload/v1560256496/match_heart_blue_hpkoui.png',
+    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/pbbdwnyxlbsb/',
+    speaker1: 'TBD',
+    speaker2: 'TBD',
+    venue: "Match",
   },
 ];
