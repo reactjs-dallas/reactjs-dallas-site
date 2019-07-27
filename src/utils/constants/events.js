@@ -112,7 +112,7 @@ export const futureEventData = [
     imageBackgroundColor: null,
     date: 'August 2019',
     imageLink: 'https://res.cloudinary.com/drumsensei/image/upload/v1560256496/match_heart_blue_hpkoui.png',
-    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/pbbdwnyxlbsb/',
+    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/pbbdwnyzlbrb/',
     speaker1: 'TBD',
     speaker2: 'TBD',
     venue: "Match",
