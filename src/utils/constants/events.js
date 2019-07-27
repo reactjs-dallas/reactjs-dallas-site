@@ -113,8 +113,8 @@ export const futureEventData = [
     date: 'August 2019',
     imageLink: 'https://res.cloudinary.com/drumsensei/image/upload/v1560256496/match_heart_blue_hpkoui.png',
     meetupLink: 'https://www.meetup.com/ReactJSDallas/events/pbbdwnyzlbrb/',
-    speaker1: 'TBD',
-    speaker2: 'TBD',
+    speaker1: '',
+    speaker2: '',
     venue: "Match",
   },
 ];
