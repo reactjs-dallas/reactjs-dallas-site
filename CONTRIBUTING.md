@@ -13,6 +13,7 @@ Thanks for being awesome! We want contributing to the ReactJS Dallas website to 
 ReactJS Dallas is a safe place for anyone who wants to help build and develop any of our projects. We expect everyone participating in the ReactJS Dallas community to follow our [Code of Conduct](/CODE_OF_CONDUCT.md). Take a moment to read it. We have a long history of great experiences built on trust and learning all about React in a fun environment. Let's keep it going!
 
 ## Your first Pull Request
+
 Working on your first Pull Request? You can learn how from this free video series:
 
 How to Contribute to an Open Source Project on GitHub
@@ -44,31 +45,33 @@ git pull upstream master
 ```
 
 4. Create a new firebase project
-  - In the overview screen click '</>' to find API key and other variables
+  - In the "Project Overview" click on "Add app". API key and other variables will be available in the next steps.
+  - If you already have an app added, then click the button in the image below. From there click '</>' to find API key and other variables.
+  ![firebase get env values](https://res.cloudinary.com/drumsensei/image/upload/v1580149791/firebase-get-env-values.png)
 
 5. Create a `.env` file in the root directory with variables that match the [`example.env`](https://github.com/reactjs-dallas/reactjs-dallas-site/blob/master/example.env)
   - Add your own values from the new firebase project from step 4
 
 
-5. Install dependencies:
+6. Install dependencies:
 
 ```
 yarn install
 ```
 
-6. Create a topic branch:
+7. Create a topic branch:
 
 ```
 git checkout -b my-topic-branch
 ```
 
-7. Run the project in dev mode:
+8. Run the project in dev mode:
 
 ```
 gatsby develop
 ```
 
-8. Make changes, commit, and push to your fork:
+9. Make changes, commit, and push to your fork:
 
 ```
 git push -u
