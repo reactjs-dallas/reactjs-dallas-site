@@ -45,13 +45,15 @@ git pull upstream master
 ```
 
 4. Create a new firebase project
-  - In the "Project Overview" click on "Add app". API key and other variables will be available in the next steps.
-  - If you already have an app added, then click the button in the image below. From there click '</>' to find API key and other variables.
+
+- In the "Project Overview" click on "Add app". API key and other variables will be available in the next steps.
+- If you already have an app added, then click the button in the image below. From there click '</>' to find API key and other variables.
   ![firebase get env values](https://res.cloudinary.com/drumsensei/image/upload/v1580149791/firebase-get-env-values.png)
 
 5. Create a `.env` file in the root directory with variables that match the [`example.env`](https://github.com/reactjs-dallas/reactjs-dallas-site/blob/master/example.env)
-  - Add your own values from the new firebase project from step 4
 
+- Add your own values from the new firebase project from step 4
+- If you cannot locate the database url variable in your Firebase project settings, use <em>sitename</em>.firebaseio.com i.e. `https://reactjs-dallas-site.firebaseio.com`
 
 6. Install dependencies:
 
