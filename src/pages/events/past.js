@@ -11,7 +11,7 @@ import { pastEventData } from '../../utils/constants/events';
 const propTypes = {
   classes: PropTypes.shape({
     media: PropTypes.string.isRequired,
-    pastMediaContainer  : PropTypes.string.isRequired,
+    pastMediaContainer: PropTypes.string.isRequired,
   }).isRequired,
 };
 
@@ -39,6 +39,10 @@ const Past = ({ classes }) => {
       meetupLink={event.meetupLink}
       speaker1={event.speaker1}
       speaker2={event.speaker2}
+      speaker3={event.speaker3}
+      speaker4={event.speaker4}
+      speaker5={event.speaker5}
+      speaker6={event.speaker6}
       venue={event.venue}
     />
   ));
