@@ -22,6 +22,9 @@ const propTypes = {
   speaker1: PropTypes.string.isRequired,
   speaker2: PropTypes.string,
   speaker3: PropTypes.string,
+  speaker4: PropTypes.string,
+  speaker5: PropTypes.string,
+  speaker6: PropTypes.string,
   venue: PropTypes.string.isRequired,
 };
 
@@ -61,6 +64,9 @@ const EventCard = ({
   speaker1,
   speaker2,
   speaker3,
+  speaker4,
+  speaker5,
+  speaker6,
   venue,
 }) => {
   return (
@@ -85,6 +91,9 @@ const EventCard = ({
         <div>{speaker1}</div>
         {speaker2 && <div>{speaker2}</div>}
         {speaker3 && <div>{speaker3}</div>}
+        {speaker4 && <div>{speaker4}</div>}
+        {speaker5 && <div>{speaker5}</div>}
+        {speaker6 && <div>{speaker6}</div>}
 
         <Button
           className={classes.button}
