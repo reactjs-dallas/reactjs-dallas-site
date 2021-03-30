@@ -1,6 +1,15 @@
 export const pastEventData = [
   {
     imageBackgroundColor: null,
+    date: 'March 2021',
+    imageLink:
+      'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/mrkxmryccfbmb/',
+    speaker1: 'Justin Noel - Flareact - Next.js Alternative for Cloudflare',
+    venue: 'yourDevice',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'February 2021',
     imageLink:
       'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
@@ -325,11 +334,11 @@ export const pastEventData = [
 export const futureEventData = [
   {
     imageBackgroundColor: null,
-    date: 'March 9, 2021',
+    date: 'April 13, 2021',
     imageLink:
       'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
     meetupLink: 'https://www.meetup.com/ReactJSDallas/events/mrkxmryccfbmb/',
-    speaker1: 'Justin Noel - Flareact - Next.js Alternative for Cloudflare',
+    speaker1: 'Tim Waite - React vs. Vue - the ultimate showdown',
     venue: 'yourDevice',
   },
 ];
