@@ -4,9 +4,11 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
+import LinkedInSvg from './shared/icons/linkedin.svg';
 import FacebookSvg from './shared/icons/facebook.svg';
 import SlackSvg from './shared/icons/slack.svg';
 import TwitterSvg from './shared/icons/twitter.svg';
+
 
 // Local Variables
 const propTypes = {
@@ -64,7 +66,17 @@ const Footer = ({
       <div className={classes.iconContainer}>
         <a
           className={classes.link}
+          href="https://www.linkedin.com/groups/13964590"
+          target="_blank"
+        >
+          <LinkedInSvg className={classes.icon} />
+        </a>
+      </div>
+      <div className={classes.iconContainer}>
+        <a
+          className={classes.link}
           href="https://join.slack.com/t/reactjs-dallas/shared_invite/enQtMzQ0NDY2NDQ3MzQ3LWI3NmM1ZWRhZTJiOWE4OTFiMTA0MWJlYWVhZWIxZjdkZTRiZGI0OWViZGFiMjhjYjdlMGI2NTBhMWYzNDJkODA"
+          target="_blank"
         >
           <SlackSvg className={classes.icon} />
         </a>
@@ -73,6 +85,7 @@ const Footer = ({
         <a
           className={classes.link}
           href="https://twitter.com/reactjsdallas"
+          target="_blank"
         >
           <TwitterSvg className={classes.icon} />
         </a>
@@ -81,6 +94,7 @@ const Footer = ({
         <a
           className={classes.link}
           href="https://www.facebook.com/reactjsdallas"
+          target="_blank"
         >
           <FacebookSvg className={classes.icon} />
         </a>
