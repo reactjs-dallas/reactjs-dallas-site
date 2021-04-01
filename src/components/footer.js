@@ -21,6 +21,8 @@ const propTypes = {
     link: PropTypes.string.isRequired,
   }).isRequired,
 };
+const date = new Date();
+const year = date.getFullYear();
 
 const styles = theme => ({
   copyright: {
@@ -105,7 +107,7 @@ const Footer = ({
       </div>
     </div>
     <div className={classes.copyright}>
-      &copy; 2019 ReactJS Dallas User Group. All Rights Reserved.
+      &copy; {year} ReactJS Dallas User Group. All Rights Reserved.
     </div>
   </footer>
 );
