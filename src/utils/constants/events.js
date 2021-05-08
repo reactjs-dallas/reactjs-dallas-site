@@ -1,6 +1,15 @@
 export const pastEventData = [
   {
     imageBackgroundColor: null,
+    date: 'April 13, 2021',
+    imageLink:
+      'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/276279684/',
+    speaker1: "Tim Waite - How to choose the right JS framework - And why it's probably React",
+    venue: 'yourDevice',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'March 2021',
     imageLink:
       'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
@@ -334,11 +343,11 @@ export const pastEventData = [
 export const futureEventData = [
   {
     imageBackgroundColor: null,
-    date: 'April 13, 2021',
+    date: 'May 11, 2021',
     imageLink:
       'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/276279684/',
-    speaker1: "Tim Waite - How to choose the right JS framework - And why it's probably React",
+    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/mrkxmrycchbpb/',
+    speaker1: "Adrianne Mallett - Writing Tests First",
     venue: 'yourDevice',
   },
 ];
