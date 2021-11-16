@@ -25,5 +25,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-glamor',
     'gatsby-plugin-remove-serviceworker',
+    'gatsby-plugin-sass',
   ],
 };

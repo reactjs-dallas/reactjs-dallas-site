@@ -1,0 +1,26 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  min-height: 310px;
+  padding: 3.5rem 0;
+}
+.heroContainer {
+  background: #282c34;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.heroText {
+  color: #fff;
+  font-weight: 100;
+}
+.heroTitle {
+  color: #61dafb;
+}
+.root {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

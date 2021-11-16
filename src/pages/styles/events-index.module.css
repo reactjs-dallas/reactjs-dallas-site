@@ -1,0 +1,21 @@
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.5rem;
+}
+.heroContainer {
+  background: #282c34;
+  padding: 2rem;
+}
+.heroText {
+  color: #fff;
+  font-weight: 100;
+}
+.heroTitle {
+  color: #61dafb;
+}
+.root {
+  text-align: center;
+}

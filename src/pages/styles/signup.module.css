@@ -1,0 +1,25 @@
+.root {
+  text-align: center;
+}
+
+.heroContainer {
+  background: #282c34;
+  padding: 2rem;
+}
+
+.heroTitle {
+  color: #61dafb;
+}
+
+.heroText {
+  color: white;
+  font-weight: 100;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.5rem 0;
+  align-items: center;
+}

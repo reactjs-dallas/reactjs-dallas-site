@@ -1,24 +1,15 @@
 // External Dependencies
 import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
-import Footer from './footer';
+import Footer from './Footer/Footer';
 import Header from './header';
 import withAuthentication from './session/withAuthentication';
 import './layout.css';
 
 // Local Variables
-const propTypes = {
-  classes: PropTypes.shape({
-    childrenContainer: PropTypes.string.isRequired,
-    main: PropTypes.string.isRequired,
-  }).isRequired,
-};
-
 const styles = {
   childrenContainer: {
     margin: '0 auto',
@@ -81,4 +72,4 @@ const Layout = ({ children, classes }) => (
 
 Layout.propTypes = propTypes;
 
-export default withStyles(styles)(withAuthentication(Layout));
+export default withAuthentication(Layout);
