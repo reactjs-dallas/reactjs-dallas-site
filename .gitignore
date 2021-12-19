@@ -9,7 +9,6 @@ yarn-error.log
 
 # IDE specific
 .idea/
-.vscode/
 *.sw*
 
 # Environment variables

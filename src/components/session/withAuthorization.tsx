@@ -1,5 +1,5 @@
 // External Dependencies
-import React from 'react';
+import * as React from 'react';
 import { navigate } from 'gatsby';
 
 // Internal Dependencies
