@@ -1,6 +1,6 @@
 // External Dependencies
 import Helmet from 'react-helmet';
-import PropTypes, { bool } from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
@@ -17,8 +17,8 @@ const propTypes = {
     childrenContainer: PropTypes.string.isRequired,
     main: PropTypes.string.isRequired,
   }).isRequired,
-  hideFooter: bool,
-  hideNav: bool,
+  hideFooter: PropTypes.bool,
+  hideNav: PropTypes.bool,
 };
 
 const styles = {
