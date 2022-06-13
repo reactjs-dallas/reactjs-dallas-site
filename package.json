@@ -1,7 +1,7 @@
 {
   "name": "reactjs-dallas-site",
   "description": "Internet website for the ReactJS Dallas User Group",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Mike Mathew <m2mathew@me.com>",
   "engines": {
     "node": "^10.16.0",
@@ -40,7 +40,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

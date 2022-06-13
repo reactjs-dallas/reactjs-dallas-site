@@ -17,6 +17,8 @@ const propTypes = {
     childrenContainer: PropTypes.string.isRequired,
     main: PropTypes.string.isRequired,
   }).isRequired,
+  hideFooter: PropTypes.bool,
+  hideNav: PropTypes.bool,
 };
 
 const styles = {
@@ -25,12 +27,18 @@ const styles = {
     padding: 0,
   },
   main: {
+    backgroundColor: 'black',
     minHeight: '100vh'
   },
 };
 
 // Component Definition
-const Layout = ({ children, classes }) => (
+const Layout = ({
+  children,
+  classes,
+  hideFooter = false,
+  hideNav = false,
+}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -66,12 +74,12 @@ const Layout = ({ children, classes }) => (
             />
           </Helmet>
           <main className={classes.main}>
-            <Header siteTitle={data.site.siteMetadata.title} />
+            {hideNav ? null : <Header siteTitle={data.site.siteMetadata.title} />}
             <div className={classes.childrenContainer}
             >
               {children}
             </div>
-            <Footer />
+            {hideFooter ? null : <Footer />}
           </main>
         </>
       )
