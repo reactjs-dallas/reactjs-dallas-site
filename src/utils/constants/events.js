@@ -1,4 +1,31 @@
-export const pastEventData = [
+export const eventData = [
+  {
+    imageBackgroundColor: null,
+    date: 'August 2022',
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1660078702/2022-08-09_-_ReactJS_Dallas_featuring_Mike_Mathew_llj2iu.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/286566689/',
+    speaker1: "Mike Mathew - JavaScript for Beginners",
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
+    date: 'July 2022',
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1660078459/2022-07-12_-_ReactJS_Dallas_featuring_Humberto_Lopez_r6bcfl.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/286566677/',
+    speaker1: "Humberto Lopez - Debugging in React and JavaScript",
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
+    date: 'May 11, 2021',
+    imageLink:
+      'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/mrkxmrycchbpb/',
+    speaker1: "Adrianne Mallett - Writing Tests First",
+    venue: 'yourDevice',
+  },
   {
     imageBackgroundColor: null,
     date: 'April 13, 2021',
@@ -337,17 +364,5 @@ export const pastEventData = [
     speaker1: 'Lightning Talks from the Match team',
     speaker2: 'Joey Kreft - On the Grid',
     venue: 'Match',
-  },
-];
-
-export const futureEventData = [
-  {
-    imageBackgroundColor: null,
-    date: 'May 11, 2021',
-    imageLink:
-      'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-    meetupLink: 'https://www.meetup.com/ReactJSDallas/events/mrkxmrycchbpb/',
-    speaker1: "Adrianne Mallett - Writing Tests First",
-    venue: 'yourDevice',
   },
 ];

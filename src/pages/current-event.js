@@ -8,7 +8,7 @@ import Layout from '../components/layout';
 const CurrentEvent = () => (
   <Layout hideFooter hideNav>
     <div>
-      <img width="100%" height="100%" src="https://res.cloudinary.com/reactjs-dallas/image/upload/v1655155227/2022-06-13_-_react_meetup_thumbnail_en9dlo.png"/>
+      <img alt="meetup-speaker" width="100%" height="100%" src="https://res.cloudinary.com/reactjs-dallas/image/upload/v1660078702/2022-08-09_-_ReactJS_Dallas_featuring_Mike_Mathew_llj2iu.png"/>
     </div>
   </Layout>
 );
