@@ -12,6 +12,7 @@ import ReactDallasLogoSection from '../../components/shared/ReactDallasLogoSecti
 const styles = theme => ({
   content: {
     alignItems: 'center',
+    color: theme.palette.common.white,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

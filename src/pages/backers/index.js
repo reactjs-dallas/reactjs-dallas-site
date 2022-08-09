@@ -21,6 +21,7 @@ const propTypes = {
 
 const styles = theme => ({
   content: {
+    color: theme.palette.common.white,
     textAlign: 'left',
     padding: '3.5rem',
   },
