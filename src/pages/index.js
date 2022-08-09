@@ -20,11 +20,12 @@ const propTypes = {
 
 const styles = theme => ({
   content: {
+    color: theme.palette.common.white,
     display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
     justifyContent: 'center',
-    minHeight: 310,
+    minHeight: '20em',
     padding: '3.5rem 0',
   },
   heroContainer: {

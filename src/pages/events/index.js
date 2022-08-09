@@ -1,22 +1,18 @@
 // External Dependencies
-import CalendarToday from '@material-ui/icons/CalendarToday';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Tab from '@material-ui/core/Tab';
-import Tabs from '@material-ui/core/Tabs';
 import { withStyles } from '@material-ui/core/styles';
 
 // Internal Dependencies
 import Layout from '../../components/layout';
-import Past from './past';
+import EventList from './event-list';
 import ReactDallasLogoSection from '../../components/shared/ReactDallasLogoSection';
-import Upcoming from './upcoming';
 
 // Local Variables
 const styles = theme => ({
   content: {
     alignItems: 'center',
+    color: theme.palette.common.white,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -50,36 +46,10 @@ class Events extends Component {
     }).isRequired,
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentTab: 0,
-    };
-  }
-
-  handleChangeTab = (event, value) => {
-    this.setState({ currentTab: value });
-  };
-
-  getCurrentTabContent = () => {
-    const {
-      currentTab,
-    } = this.state;
-
-    return currentTab === 0
-      ? <Upcoming />
-      : <Past />;
-  };
-
   render() {
     const {
       classes,
     } = this.props;
-
-    const {
-      currentTab,
-    } = this.state;
 
     return (
       <Layout>
@@ -91,19 +61,8 @@ class Events extends Component {
             </header>
           </section>
 
-          <Tabs
-            indicatorColor="primary"
-            onChange={this.handleChangeTab}
-            textColor="primary"
-            value={currentTab}
-            variant="fullWidth"
-          >
-            <Tab icon={<CalendarToday />} label="Upcoming" />
-            <Tab icon={<FavoriteIcon />} label="Past" />
-          </Tabs>
-
           <section className={classes.content}>
-            {this.getCurrentTabContent()}
+            <EventList />
           </section>
 
           <ReactDallasLogoSection />
