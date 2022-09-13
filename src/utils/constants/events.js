@@ -1,6 +1,16 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'September 2022',
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1663108736/2022-09-13--react_meetup_xjirma.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/vpgwssydcmbrb/',
+    speaker1: "Ram Beltran - My First Failed Startup: Lessons Learned",
+    speaker2: "Mike Mathew - Overview of the MUI-X DataGrid",
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'August 2022',
     imageLink:
       'https://res.cloudinary.com/reactjs-dallas/image/upload/v1660078702/2022-08-09_-_ReactJS_Dallas_featuring_Mike_Mathew_llj2iu.png',
