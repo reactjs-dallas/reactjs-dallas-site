@@ -1,7 +1,18 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'October 2022',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1665520953/2022-10-11--react_meetup_preview_svey2s.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/286566708/',
+    speaker1: "Austin Akers - Tips For Building A Strong Junior Developer Portfolio",
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'September 2022',
+    fullWidthImage: true,
     imageLink:
       'https://res.cloudinary.com/reactjs-dallas/image/upload/v1663108736/2022-09-13--react_meetup_xjirma.png',
     meetupLink: 'https://www.meetup.com/reactjsdallas/events/vpgwssydcmbrb/',
@@ -12,6 +23,7 @@ export const eventData = [
   {
     imageBackgroundColor: null,
     date: 'August 2022',
+    fullWidthImage: true,
     imageLink:
       'https://res.cloudinary.com/reactjs-dallas/image/upload/v1660078702/2022-08-09_-_ReactJS_Dallas_featuring_Mike_Mathew_llj2iu.png',
     meetupLink: 'https://www.meetup.com/reactjsdallas/events/286566689/',
@@ -21,6 +33,7 @@ export const eventData = [
   {
     imageBackgroundColor: null,
     date: 'July 2022',
+    fullWidthImage: true,
     imageLink:
       'https://res.cloudinary.com/reactjs-dallas/image/upload/v1660078459/2022-07-12_-_ReactJS_Dallas_featuring_Humberto_Lopez_r6bcfl.png',
     meetupLink: 'https://www.meetup.com/reactjsdallas/events/286566677/',
