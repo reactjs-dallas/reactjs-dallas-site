@@ -10,6 +10,7 @@ const EventList = () => {
   const upcomingEvents = eventData.map(event => (
     <EventCard
       date={event.date}
+      fullWidthImage={event.fullWidthImage}
       key={event.date}
       imageBackgroundColor={event.imageBackgroundColor}
       imageLink={event.imageLink}

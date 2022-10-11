@@ -16,6 +16,7 @@ const propTypes = {
     mediaContainer: PropTypes.string.isRequired,
   }).isRequired,
   date: PropTypes.string.isRequired,
+  fullWidthImage: PropTypes.bool,
   imageBackgroundColor: PropTypes.string,
   imageLink: PropTypes.string.isRequired,
   meetupLink: PropTypes.string.isRequired,
@@ -29,6 +30,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  fullWidthImage: false,
   imageBackgroundColor: null,
   speaker2: null,
   speaker3: null,
@@ -58,6 +60,7 @@ const styles = theme => ({
 const EventCard = ({
   classes,
   date,
+  fullWidthImage,
   imageBackgroundColor,
   imageLink,
   meetupLink,
@@ -79,7 +82,7 @@ const EventCard = ({
       >
         <CardMedia
           alt={`${venue} Logo`}
-          className={classes.media}
+          className={fullWidthImage ? '' : classes.media}
           component="img"
           image={imageLink}
           title={`${venue} Logo`}
