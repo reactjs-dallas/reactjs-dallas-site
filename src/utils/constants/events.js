@@ -1,6 +1,16 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'November 2022',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1667950462/2022-11-08--react_meetup_preview_mpdlif.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/287192568/',
+    speaker1: "Mike Mathew — Programming Buzz Words Explained",
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'October 2022',
     fullWidthImage: true,
     imageLink:
