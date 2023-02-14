@@ -27,7 +27,7 @@
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-transformer-remark": "^2.6.48",
+    "gatsby-transformer-remark": "^5.25.1",
     "glamor": "^2.20.40",
     "prop-types": "^15.8.1",
     "react": "^16.12.0",
