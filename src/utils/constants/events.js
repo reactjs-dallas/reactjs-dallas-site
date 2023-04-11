@@ -1,6 +1,16 @@
 export const eventData = [
          {
            imageBackgroundColor: null,
+           date: 'April 2023',
+           fullWidthImage: true,
+           imageLink:
+             'https://res.cloudinary.com/reactjs-dallas/image/upload/v1681242853/2023-04-11--reactjs_dallas_with_mike_mathew_ic3xiv.png',
+           meetupLink: 'https://www.meetup.com/reactjsdallas/events/291856247/',
+           speaker1: 'Mike Mathew — Get Started with React Native',
+           venue: 'Text-Em-All',
+         },
+         {
+           imageBackgroundColor: null,
            date: 'March 2023',
            fullWidthImage: true,
            imageLink:
