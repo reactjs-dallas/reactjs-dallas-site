@@ -24,6 +24,7 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
+    fontSize: '1.5rem',
     justifyContent: 'center',
     minHeight: '20em',
     padding: '3.5rem 0',
@@ -36,10 +37,12 @@ const styles = theme => ({
   },
   heroText: {
     color: theme.palette.common.white,
+    fontSize: '1.5rem',
     fontWeight: 100,
   },
   heroTitle: {
     color: '#61dafb',
+    fontSize: '3rem',
   },
   root: {
     display: 'flex',
