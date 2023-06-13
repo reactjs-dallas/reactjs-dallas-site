@@ -1,6 +1,16 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'June 2023',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1684604117/2023-06-13--reactjs_dallas_with_mark_mulligan_zugz4l.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/292302392/',
+    speaker1: 'Mark Mulligan — Modern React Development',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'May 2023',
     fullWidthImage: true,
     imageLink:
