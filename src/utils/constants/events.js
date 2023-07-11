@@ -1,6 +1,16 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'July 2023',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1689104985/2023-07-11--ReactJS-Dallas-with-Joe-Warren_wgtspo.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/293426756/',
+    speaker1: 'Joe Warren — The Art of Coding with Generative AI',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'June 2023',
     fullWidthImage: true,
     imageLink:
