@@ -1,6 +1,16 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'August 2023',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1691517314/2023-08-08--reactjs_dallas_with_james_vogel_ygztis.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/293449080/',
+    speaker1: 'James Vogel — Better Data Plumbing with TanStack Query',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'July 2023',
     fullWidthImage: true,
     imageLink:
