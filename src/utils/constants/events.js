@@ -1,6 +1,16 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'September 2023',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1694556369/2023-09-12--reactjs_dallas_with_patrick_hulce_ohfmm2.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/295334682/',
+    speaker1: 'Patrick Hulce — Technical Writing Workshop',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'August 2023',
     fullWidthImage: true,
     imageLink:
