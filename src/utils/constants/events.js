@@ -1,6 +1,16 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'October 2023',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1696973693/2023-10-10--ReactJS-Dallas-with-Rigre-Garciandia_dnuido.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/296071117/',
+    speaker1: 'Rigre Garciandia — Technical Writing Workshop',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'September 2023',
     fullWidthImage: true,
     imageLink:
