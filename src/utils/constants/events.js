@@ -1,6 +1,26 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'January 2024',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1704836098/2024-01-09--reactjs_dallas_with_mike_mathew_nmafhj.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/297672251/',
+    speaker1: 'Mike Mathew — Learn How to Work Better With Your Team',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
+    date: 'December 2023',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1704835719/2023-12-13--react_js_with_tim_waite_ppdadd.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/297287649/',
+    speaker1: 'Tim Waite — Beyond Context: Atomic State Management (Recoil.js)',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'November 2023',
     fullWidthImage: true,
     imageLink:
