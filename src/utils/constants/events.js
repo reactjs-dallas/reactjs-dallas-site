@@ -5,7 +5,7 @@ export const eventData = [
     fullWidthImage: true,
     imageLink:
       'https://res.cloudinary.com/reactjs-dallas/image/upload/v1707847506/2024-02-13--feb_2024_reactjs_dallas_bnoyi6.png',
-    meetupLink: 'https://www.meetup.com/reactjsdallas/events/297672251/',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071583/',
     speaker1: 'Vishnu Ramineni — Performance Optimization of Next.js App',
     speaker2: 'Mike Mathew — Use MUI-X Data Grid to Super-Charge Your Data Tables',
     venue: 'Text-Em-All',
