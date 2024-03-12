@@ -1,7 +1,17 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
-    date: 'January 2024',
+    date: 'March 2024',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1710254183/2024-03-12--reactjs_with_mark_mulligan_qxgybv.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071585/',
+    speaker1: 'Mark Mulligan — Tailwind CSS',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
+    date: 'February 2024',
     fullWidthImage: true,
     imageLink:
       'https://res.cloudinary.com/reactjs-dallas/image/upload/v1707847506/2024-02-13--feb_2024_reactjs_dallas_bnoyi6.png',
