@@ -1,4 +1,6 @@
 // External Dependencies
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
@@ -106,9 +108,19 @@ const Footer = ({
         </a>
       </div>
     </div>
+
     <div className={classes.copyright}>
       &copy; {year} ReactJS Dallas User Group. All Rights Reserved.
     </div>
+
+    <Box marginTop={2}>
+      <Button
+        color="primary"
+        href="/current-event"
+      >
+        View Current Event
+      </Button>
+    </Box>
   </footer>
 );
 

@@ -1,6 +1,16 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'April 2024',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1712689786/2024-04-09--reactjs_dallas_with_mike_mathew_group_project_thkkla.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071586/',
+    speaker1: 'Group Project: Update the ReactJS Dallas Website',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'March 2024',
     fullWidthImage: true,
     imageLink:
