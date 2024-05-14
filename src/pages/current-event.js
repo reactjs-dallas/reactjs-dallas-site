@@ -11,7 +11,7 @@ const CurrentEvent = () => (
       <img
         alt="meetup-speaker"
         height="100%"
-        src="https://res.cloudinary.com/reactjs-dallas/image/upload/v1712689786/2024-04-09--reactjs_dallas_with_mike_mathew_group_project_thkkla.png"
+        src="https://res.cloudinary.com/reactjs-dallas/image/upload/v1715716576/2024-05-14--patrick_hulce_dxcfcz.png"
         width="100%"
       />
     </div>
