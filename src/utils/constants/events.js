@@ -1,6 +1,16 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'May 2024',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1715716576/2024-05-14--patrick_hulce_dxcfcz.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071587/',
+    speaker1: 'Patrick Hulce — AI at Netflix: Building Your First Computer Vision App',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'April 2024',
     fullWidthImage: true,
     imageLink:
