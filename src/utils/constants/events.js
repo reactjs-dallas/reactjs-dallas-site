@@ -1,6 +1,16 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'June 2024',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1718142085/2024-06-11--reactjs-dallas-career-workshop_jrjhku.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071588/',
+    speaker1: 'ReactJS Dallas Career Workshop',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'May 2024',
     fullWidthImage: true,
     imageLink:
