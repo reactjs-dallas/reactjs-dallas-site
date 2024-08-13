@@ -43,16 +43,21 @@ const styles = theme => ({
   card: {
     margin: '12px 0',
     maxWidth: 600,
+    width: '100%',
   },
   media: {
     height: '50%',
+    padding: '0 24px',
     width: '50%',
   },
   mediaContainer: {
     background: '#f1f1f1',
     display: 'flex',
     justifyContent: 'center',
+    padding: '0 auto',
+    maxWidth: 600,
     paddingTop: 24,
+    width: '100%',
   },
 });
 

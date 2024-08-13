@@ -1,6 +1,26 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'August 2024',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1723566253/2024-08-13--reactjs_dallas--vishnu_ramineni_udts8g.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071591/',
+    speaker1: 'NextJS Error Handling and Error Reporting',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
+    date: 'July 2024',
+    fullWidthImage: false,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1723567977/text-em-all-web-logo_v8ween.svg',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071590/',
+    speaker1: 'Networking with food and drink',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'June 2024',
     fullWidthImage: true,
     imageLink:
