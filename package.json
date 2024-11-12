@@ -1,10 +1,10 @@
 {
   "name": "reactjs-dallas-site",
   "description": "Internet website for the ReactJS Dallas User Group",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "author": "Mike Mathew <m2mathew@me.com>",
   "engines": {
-    "node": "^10.16.0",
+    "node": "10.x",
     "npm": "6.x"
   },
   "repository": {
