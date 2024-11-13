@@ -1,12 +1,42 @@
 export const eventData = [
   {
     imageBackgroundColor: null,
+    date: 'November 2024',
+    fullWidthImage: true,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1731446450/2024-11-12--mike-mathew_ovdorh.png',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071591/',
+    speaker1: 'Mike Mathew — Get Started with React Native and Expo',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
+    date: 'October 2024',
+    fullWidthImage: false,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1723567977/text-em-all-web-logo_v8ween.svg',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071591/',
+    speaker1: 'Vishnu Ramineni — Building Desktop Applications Using Electron and ReactJS',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
+    date: 'September 2024',
+    fullWidthImage: false,
+    imageLink:
+      'https://res.cloudinary.com/reactjs-dallas/image/upload/v1723567977/text-em-all-web-logo_v8ween.svg',
+    meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071591/',
+    speaker1: 'Lucy McGuigan — That&apos;s So Fetch!: Loading and Caching Data with RTK Query',
+    venue: 'Text-Em-All',
+  },
+  {
+    imageBackgroundColor: null,
     date: 'August 2024',
     fullWidthImage: true,
     imageLink:
       'https://res.cloudinary.com/reactjs-dallas/image/upload/v1723566253/2024-08-13--reactjs_dallas--vishnu_ramineni_udts8g.png',
     meetupLink: 'https://www.meetup.com/reactjsdallas/events/298071591/',
-    speaker1: 'NextJS Error Handling and Error Reporting',
+    speaker1: 'Vishnu Ramineni — NextJS Error Handling and Error Reporting',
     venue: 'Text-Em-All',
   },
   {
